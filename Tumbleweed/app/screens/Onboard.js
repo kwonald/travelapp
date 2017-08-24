@@ -329,9 +329,7 @@ class Onboard extends Component {
         
        <Swiper style={styles.wrapper} loop={false} showsButtons={true} showsPagination={false}>
        {/*
-        <View style={styles.slide1}>
-          <Text style={styles.text}>Sign Up With FB</Text>
-        </View>
+        
         
         <TouchableOpacity onPress={this._onPressButton} style={{height:100, width:350}}>
                 <Image
@@ -340,6 +338,12 @@ class Onboard extends Component {
                 />
               </TouchableOpacity>
         */}
+        <View style={styles.slide1}>
+          <Image
+          style={{height:730, width:375}}
+          source={require('../assets/onboarding/BlurOverlay.png')}
+          />
+        </View>
         <View style={styles.slide2}>
           <Text style={styles.text1}>Welcome to Tumbleweed, {this.state.f_name}</Text>
           <Image
@@ -587,7 +591,7 @@ var styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#9DD6EB',
+    backgroundColor: '#fff',
   },
   slide2: {
     flex: 1,

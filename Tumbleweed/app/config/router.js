@@ -13,20 +13,20 @@ import MyDreamBoard from '../screens/MyDreamBoard';
 import TripDetail from '../screens/TripDetail';
 import Itinerary from '../screens/Itinerary';
 
-export const FeedStack = StackNavigator({
-  MyDreamBoard: {
-    screen: MyDreamBoard,
-    navigationOptions: {
-      title: 'MyDreamBoard',
-    },
-  },
-  Details: {
-    screen: UserDetail,
-    navigationOptions: ({ navigation }) => ({
-      title: `${navigation.state.params.name.first.toUpperCase()} ${navigation.state.params.name.last.toUpperCase()}`,
-    }),
-  },
-});
+// export const FeedStack = StackNavigator({
+//   MyDreamBoard: {
+//     screen: MyDreamBoard,
+//     navigationOptions: {
+//       title: 'MyDreamBoard',
+//     },
+//   },
+//   Details: {
+//     screen: UserDetail,
+//     navigationOptions: ({ navigation }) => ({
+//       title: `${navigation.state.params.name.first.toUpperCase()} ${navigation.state.params.name.last.toUpperCase()}`,
+//     }),
+//   },
+// });
 
 // export const ExploreStack = StackNavigator({
 //   Explore: {
@@ -61,7 +61,7 @@ export const Tabs = TabNavigator({
   },
 
   MyDreamBoard: {
-    screen: FeedStack,
+    screen: MyDreamBoard,
     navigationOptions: {
       tabBarLabel: 'MyDreamBoard',
       tabBarIcon: ({ tintColor }) => <Icon name="favorite" size={35} color={tintColor} />,
