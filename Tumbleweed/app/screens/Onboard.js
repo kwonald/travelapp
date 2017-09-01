@@ -343,6 +343,9 @@ class Onboard extends Component {
           style={{height:730, width:375}}
           source={require('../assets/onboarding/BlurOverlay.png')}
           />
+          
+
+
         </View>
         <View style={styles.slide2}>
           <Text style={styles.text1}>Welcome to Tumbleweed, {this.state.f_name}</Text>

@@ -5,7 +5,10 @@ import {
   ScrollView,
   StyleSheet,
   TouchableOpacity,
-  Image
+  Image,
+  ActivityIndicator,
+  ListView,
+  Alert
 } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 import { users } from '../config/data';
@@ -14,12 +17,70 @@ class MyDreamBoard extends Component {
   // onLearnMore = (user) => {
   //   this.props.navigation.navigate('Details', { ...user });
   // };
+  constructor(props){
+    super(props);
+    this.state = {
+      isLoading: true
+    }
+  }
+  GetItem (activityname){
+    Alert.alert(activityname);  // activityname
+  }
 
-  render() {
+  componentDidMount(){
+     return fetch('http://localhost:3000/submit_user_info.php')
+      .then((response) => response.json())
+      .then((responseJson) => {
+        let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+        this.setState({
+          isLoading: false,
+          dataSource: ds.cloneWithRows(responseJson),
+        }, function() {
+          // In this block you can do something with new state.
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+
+  ListViewItemSeparator = () => {
     return (
-       <View style={styles.slide3}>
+      <View
+        style={{
+          height: .5,
+          width: "100%",
+          backgroundColor: "#000",
+        }}
+      />
+    );
+  }
+  render() {
+    if (this.state.isLoading) {
+      return (
+        <View style={{flex: 1, paddingTop: 20}}>
+          <ActivityIndicator />
+        </View>
+      );
+    }
+
+    return (
+       
         
-          <Text style={styles.text1}>Itinerary</Text>
+          <View style={styles.MainContainer}>
+            <ListView
+     
+              dataSource={this.state.dataSource}
+     
+              renderSeparator= {this.ListViewItemSeparator}
+     
+              renderRow={(rowData) => <Text style={styles.rowViewContainer} 
+              onPress={this.GetItem.bind(this, rowData.activityname)} >{rowData.activityname}</Text>}
+     
+            />
+       
+ 
+      
          
         </View>
     );
@@ -35,6 +96,21 @@ var styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
+  MainContainer :{
+  // Setting up View inside content in Vertically center.
+  justifyContent: 'center',
+  flex:1,
+  margin: 10
+   
+  },
+ 
+  rowViewContainer: {
+    fontSize: 20,
+    paddingRight: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
+
   welcome: {
     fontSize: 20,
     textAlign: 'center',

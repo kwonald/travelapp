@@ -1,26 +1,88 @@
 import React, { Component } from 'react';
 import {
-ScrollView, Image, View, Text, TextInput, TouchableOpacity, Dimensions, TouchableHighlight, StyleSheet
-} from 'react-native';
+ScrollView, Image, View, Text, TextInput, TouchableOpacity, Dimensions, TouchableHighlight, StyleSheet, ActivityIndicator, ListView, Alert } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 import { trips } from '../config/data';
 import Modal from 'react-native-modal'
 
 class Explore extends Component {
-  state = {
-    isModalVisible: true
+  constructor(props){
+    super(props);
+    this.state = {
+      isLoading: true,
+      isModalVisible: true,
+    }
   }
+  // state = {
+  //   isModalVisible: true   //change to true for first time user
+  // }
  
   _showModal = () => this.setState({ isModalVisible: true })
  
   _hideModal = () => this.setState({ isModalVisible: false })
 
+  seeMustSee = () => {
+    this.props.navigation.navigate('MustSee');
+  }
 
-  onLearnMore = (trip) => {
-    this.props.navigation.navigate('Details', { ...trip });
-  };
+  seeAllBeaches = () => {
+    this.props.navigation.navigate('Beaches');
+  }
+
+  seeAllHikes = () => {
+    this.props.navigation.navigate('Hikes');
+  }
+
+  seeAllRestaurants = () => {
+    this.props.navigation.navigate('Restaurants');
+  }
+
+  seeAllSports = () => {
+    this.props.navigation.navigate('Sports');
+  }
+
+  GetItem (activityname){
+    Alert.alert(activityname);  // activityname
+  }
+
+  componentDidMount(){
+     return fetch('http://localhost:3000/submit_user_info.php')
+      .then((response) => response.json())
+      .then((responseJson) => {
+        let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+        this.setState({
+          isLoading: false,
+          dataSource: ds.cloneWithRows(responseJson),
+        }, function() {
+          // In this block you can do something with new state.
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+
+  ListViewItemSeparator = () => {
+    return (
+      <View
+        style={{
+          height: .5,
+          width: "100%",
+          backgroundColor: "#000",
+        }}
+      />
+    );
+  }
+
 
   render() {
+    if (this.state.isLoading) {
+      return (
+        <View style={{flex: 1, paddingTop: 20}}>
+          <ActivityIndicator />
+        </View>
+      );
+    }
     return (
       <View style={{flex:1, backgroundColor: '#fff'}}>
       <ScrollView>
@@ -53,60 +115,72 @@ class Explore extends Component {
             // onChangeText={(country) => this.setState({country})}
           />
         </View>
-        <Text style={{paddingTop: 15, paddingLeft: 10, fontSize: 25, fontWeight: 'normal', color: '#000'}}> Best Beaches </Text>
-        <View style={{ flex:1, flexDirection: 'row'}}>
-          <ScrollView horizontal={true}>
-            <View style={{padding:5}}>
-              <Image
-                style={{height:150, width:250,  borderRadius: 5,}}
-                source={require('../assets/explore/English-Bay.jpg')}
-              />
-              <Text style={{paddingTop: 10}}> English Bay </Text>
-              <View style={{flexDirection: 'row', paddingTop:5}}>
-                <Image
-                  style={{height:15, width:100,  }}
-                  source={require('../assets/explore/StarsIcons.png')}
-                 />
-                 <Text style={{fontSize: 15}}> 295 Reviews </Text>
-              </View>
+
+        <View style={{flex:1}}>
+            <View style={{flex:1, flexDirection: "row", justifyContent: 'space-between'}}>
+              <Text style={{paddingTop: 15, paddingLeft: 10, fontSize: 25, fontWeight: 'normal', color: '#000'}}> Best Beaches </Text>
+              <TouchableOpacity onPress={this.seeAllBeaches}>
+                  <Text style={{paddingTop: 25, paddingLeft: 10, paddingRight:5,fontSize: 12, fontWeight: 'normal', color: '#000'}}> SEE ALL </Text>
+              </TouchableOpacity>
             </View>
-            
-            <View style={{padding:5}}>
-              <Image
-                style={{height:150, width:250, borderRadius: 5,}}
-                source={require('../assets/explore/Stearman-Beach.jpg')}
-              />
-              <Text style={{paddingTop: 10}}> Stearman Beach </Text>
-              <View style={{flexDirection: 'row', paddingTop:5}}>
+
+       
+          <View style={{ flex:1, flexDirection: 'row'}}>
+            <ScrollView horizontal={true}>
+              <View style={{padding:5}}>
                 <Image
-                  style={{height:15, width:100,  }}
-                  source={require('../assets/explore/StarsIcons.png')}
-                 />
-                 <Text style={{fontSize: 15}}> 295 Reviews </Text>
+                  style={{height:150, width:250,  borderRadius: 5,}}
+                  source={require('../assets/explore/English-Bay.jpg')}
+                />
+                <Text style={{paddingTop: 10}}> English Bay </Text>
+                <View style={{flexDirection: 'row', paddingTop:5}}>
+                  <Image
+                    style={{height:15, width:100,  }}
+                    source={require('../assets/explore/StarsIcons.png')}
+                   />
+                   <Text style={{fontSize: 15}}> 295 Reviews </Text>
+                </View>
               </View>
-            </View>
-            <View style={{padding:5}}>
-              <Image
-                style={{height:150, width:250, borderRadius: 5,}}
-                source={require('../assets/explore/spanishbanksbeachpark.jpg')}
-              />
-              <Text style={{paddingTop: 10}}> Spanish Banks </Text>
-              <View style={{flexDirection: 'row', paddingTop:5}}>
+              
+              <View style={{padding:5}}>
                 <Image
-                  style={{height:15, width:100,  }}
-                  source={require('../assets/explore/StarsIcons.png')}
-                 />
-                 <Text style={{fontSize: 15}}> 295 Reviews </Text>
+                  style={{height:150, width:250, borderRadius: 5,}}
+                  source={require('../assets/explore/Stearman-Beach.jpg')}
+                />
+                <Text style={{paddingTop: 10}}> Stearman Beach </Text>
+                <View style={{flexDirection: 'row', paddingTop:5}}>
+                  <Image
+                    style={{height:15, width:100,  }}
+                    source={require('../assets/explore/StarsIcons.png')}
+                   />
+                   <Text style={{fontSize: 15}}> 295 Reviews </Text>
+                </View>
               </View>
-            </View>
-          </ScrollView>
+              <View style={{padding:5}}>
+                <Image
+                  style={{height:150, width:250, borderRadius: 5,}}
+                  source={require('../assets/explore/spanishbanksbeachpark.jpg')}
+                />
+                <Text style={{paddingTop: 10}}> Spanish Banks </Text>
+                <View style={{flexDirection: 'row', paddingTop:5}}>
+                  <Image
+                    style={{height:15, width:100,  }}
+                    source={require('../assets/explore/StarsIcons.png')}
+                   />
+                   <Text style={{fontSize: 15}}> 295 Reviews </Text>
+                </View>
+              </View>
+            </ScrollView>
+          </View>
         </View>
 
         <View style={{paddingTop:30, justifyContent:'center', alignItems:'center'}}>
-          <Image
-            style={{height:150, width:250, borderRadius: 5,}}
-            source={require('../assets/explore/ExploreVancouverCard.png')}
-          />
+          <TouchableOpacity onPress={this.seeMustSee}>
+            <Image
+              style={{height:150, width:250, borderRadius: 5,}}
+              source={require('../assets/explore/ExploreVancouverCard.png')}
+            />
+          </TouchableOpacity>
         </View>
 
         <View style={{flexDirection: 'row', paddingTop: 30, justifyContent:'space-around', alignItems: 'center'}}>
@@ -129,7 +203,13 @@ class Explore extends Component {
         </View>
 
         <View style={{paddingTop:30}}>
-          <Text style={{paddingTop: 15, paddingLeft: 10, fontSize: 25, fontWeight: 'normal', color: '#000'}}> Top Restaurants </Text>
+          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+            <Text style={{paddingTop: 15, paddingLeft: 10, fontSize: 25, fontWeight: 'normal', color: '#000'}}> Top Restaurants </Text>
+            <TouchableOpacity onPress={this.seeAllRestaurants}>
+                  <Text style={{paddingTop: 25, paddingLeft: 10, paddingRight:5, fontSize: 12, fontWeight: 'normal', color: '#000'}}> SEE ALL </Text>
+              </TouchableOpacity>
+          </View>
+          
           <View style={{flexDirection: 'row',paddingTop: 20, justifyContent:'space-around', alignItems: 'center'}}>
             <View>
                <Image
@@ -213,7 +293,13 @@ class Explore extends Component {
           </View>
         </View>
 
-        <Text style={{paddingTop: 30, paddingBottom:30, paddingLeft: 10, fontSize: 25, fontWeight: 'normal', color: '#000'}}> Top Hikes </Text>
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <Text style={{paddingTop: 30, paddingBottom:30, paddingLeft: 10, fontSize: 25, fontWeight: 'normal', color: '#000'}}> Top Hikes </Text>
+          <TouchableOpacity onPress={this.seeAllHikes}>
+                <Text style={{paddingTop: 35, paddingLeft: 10, fontSize: 12, paddingRight:5, fontWeight: 'normal', color: '#000'}}> SEE ALL </Text>
+            </TouchableOpacity>
+        </View>
+        
         <View style={{ flex:1, flexDirection: 'row'}}>
           <ScrollView horizontal={true}>
             <View style={{padding:5}}>
@@ -263,7 +349,13 @@ class Explore extends Component {
         </View>
 
 
-        <Text style={{paddingTop: 30, paddingBottom:30, paddingLeft: 10, fontSize: 25, fontWeight: 'normal', color: '#000'}}> Sports </Text>
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <Text style={{paddingTop: 30, paddingBottom:30, paddingLeft: 10, fontSize: 25, fontWeight: 'normal', color: '#000'}}> Sports </Text>
+          <TouchableOpacity onPress={this.seeAllSports}>
+                <Text style={{paddingTop: 35, paddingLeft: 10, paddingRight:5, fontSize: 12, fontWeight: 'normal', color: '#000'}}> SEE ALL </Text>
+            </TouchableOpacity>
+        </View>
+        
         <View style={{ flex:1, flexDirection: 'row'}}>
           <ScrollView horizontal={true}>
             <View style={{padding:5}}>
@@ -309,27 +401,18 @@ class Explore extends Component {
             </View>
           </ScrollView>
         </View>
-      {/*}
-        <List>
-          {trips.map((trip) => (
-            <ListItem
-              key={trip.tripID}
-              roundAvatar
-              avatar={{ uri: trip.picture.first }}
-              title={trip.title}
-              subtitle={`${trip.name.first.toUpperCase()} ${trip.name.last.toUpperCase()}`}
-              onPress={() => this.onLearnMore(trip)}
-            />
-          ))}
-        </List>
-      */}
+      
       </ScrollView>
         <Modal isVisible={this.state.isModalVisible}>
           <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
             <Text style={{fontSize: 18, color: '#fff', fontWeight: 'bold', paddingBottom: 40}}> Ready to plan your first trip, Laura? </Text>
-            <TouchableOpacity onPress={this._hideModal} style={{height:100, width:350}}>
-            <Image
+             <Image
               style={{height:70, width:350}}
+              source={require('../assets/_ModernPictograms/Gif/Thumbsup_Preview.gif')}
+            />
+            <TouchableOpacity onPress={this._hideModal} style={{height:100, width:350, paddingTop: 15}}>
+            <Image
+              style={{height:70, width:350, }}
               source={require('../assets/explore/createtrip.png')}
             />
           </TouchableOpacity>
@@ -348,5 +431,40 @@ class Explore extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+
+  MainContainer :{
+  // Setting up View inside content in Vertically center.
+  justifyContent: 'center',
+  flex:1,
+  margin: 10
+   
+  },
+ 
+  rowViewContainer: {
+    fontSize: 20,
+    paddingRight: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
+
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  },
+});
 
 export default Explore;

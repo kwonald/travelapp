@@ -12,6 +12,11 @@ import MyTrips from '../screens/MyTrips';
 import MyDreamBoard from '../screens/MyDreamBoard';
 import TripDetail from '../screens/TripDetail';
 import Itinerary from '../screens/Itinerary';
+import MustSee from '../screens/MustSee';
+import Beaches from '../screens/Beaches';
+import Restaurants from '../screens/Restaurants';
+import Hikes from '../screens/Hikes';
+import Sports from '../screens/Sports';
 
 // export const FeedStack = StackNavigator({
 //   MyDreamBoard: {
@@ -28,24 +33,61 @@ import Itinerary from '../screens/Itinerary';
 //   },
 // });
 
-// export const ExploreStack = StackNavigator({
-//   Explore: {
-//     screen: Explore,
-//     navigationOptions: {
-//       title: 'Explore',
-//     },
-//   },
-//   Details: {
-//     screen: TripDetail,
-//     navigationOptions: ({ navigation }) => ({
-//       title: `${navigation.state.params.title.toUpperCase()}`,
-//     }),
-//   },
-// });
+export const ExploreStack = StackNavigator({
+  Explore: {
+    screen: Explore,
+    navigationOptions: {
+      title: 'Explore',
+      header: null,
+    },
+  },
+  MustSee: {
+    screen: MustSee,
+    navigationOptions:{
+      title: 'Must See',
+    },
+  },
+  Beaches: {
+    screen: Beaches,
+    navigationOptions: {
+      title: 'Beaches',
+    },
+  },
+  Restaurants: {
+    screen: Restaurants,
+    navigationOptions: {
+      title: 'Restaurants',
+    },
+  },
+  Hikes: {
+    screen: Hikes,
+    navigationOptions: {
+      title: 'Hikes',
+    },
+  },
+  Sports: {
+    screen: Sports,
+    navigationOptions: {
+      title: 'Sports',
+    },
+  },
+  UserDetail: {
+    screen: UserDetail,
+    navigationOptions: ({ navigation }) => ({
+      title: `${navigation.state.params.activityname.toUpperCase()}`,
+    }),
+  },
+  // Details: {
+  //   screen: TripDetail,
+  //   navigationOptions: ({ navigation }) => ({
+  //     title: `${navigation.state.params.title.toUpperCase()}`,
+  //   }),
+  // },
+});
 
 export const Tabs = TabNavigator({
   Explore: {
-    screen: Explore,
+    screen: ExploreStack,
     navigationOptions: {
       tabBarLabel: 'Explore',
       tabBarIcon: ({ tintColor }) => <Icon name="explore" size={35} color={tintColor} />,
@@ -121,9 +163,9 @@ export const Root = StackNavigator({
 });
 
 export const Onboarding = StackNavigator({
-  Onboarding: {
-    screen: Onboard,
-  },
+  // Onboarding: {
+  //   screen: Onboard,
+  // },
   Root: {
     screen: Root,
   },
