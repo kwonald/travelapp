@@ -327,29 +327,35 @@ class Onboard extends Component {
     return (
         
        <Swiper style={styles.wrapper} loop={false} showsButtons={true} showsPagination={false}>
-       {/*
-        
-        
-        <TouchableOpacity onPress={this._onPressButton} style={{height:100, width:350}}>
-                <Image
-                  style={{height:70, width:350}}
-                  source={require('../assets/onboarding/ReserveButton.png')}
-                />
-              </TouchableOpacity>
-
-              <Image
-          style={{height:730, width:375}}
-          source={require('../assets/onboarding/BlurOverlay.png')}
-          />
-        */}
+       
         <View style={styles.slide1}>
-          
-          <Login />
-
+        <Image
+          style={{
+            backgroundColor: '#ccc',
+            flex: 1,
+            resizeMode: 'stretch',
+            width: '100%',
+            height: '100%',
+            justifyContent: 'space-around',
+            paddingLeft: 15,
+            backgroundColor: 'rgba(0,0,0,0.4)'
+          }}
+          source={require('../assets/onboarding/eiffel.jpg')}
+          >
+            <Text style={{width:200, fontSize: 25, color: '#fff', justifyContent: 'flex-start', backgroundColor: 'rgba(0,0,0,0.1)',}}>
+              Welcome to Tumbleweed
+            </Text>
+            <View style={{width:200, alignItems: 'flex-start' }}>
+              <Text style={{fontSize:14, color: '#fff', backgroundColor: 'rgba(0,0,0,0.15)',}}> Plan the best travel experiences of your life. Explore out amazing planet. Create your greatest memories. Go everywhere!
+              </Text>
+            </View>
+            <Login />
+          </Image>
 
         </View>
         <View style={styles.slide2}>
           <Text style={styles.text1}>Welcome to Tumbleweed, {this.state.f_name}</Text>
+          
           <Image
             style={{height:150, width:150}}
             source={require('../assets/onboarding/Account.png')}
@@ -593,9 +599,9 @@ var styles = StyleSheet.create({
   },
   slide1: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
+    justifyContent: 'space-around',
+    
+    backgroundColor: '#ccc',
   },
   slide2: {
     flex: 1,
