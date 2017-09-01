@@ -163,9 +163,9 @@ export const Root = StackNavigator({
 });
 
 export const Onboarding = StackNavigator({
-  // Onboarding: {
-  //   screen: Onboard,
-  // },
+  Onboarding: {
+    screen: Onboard,
+  },
   Root: {
     screen: Root,
   },

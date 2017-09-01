@@ -290,34 +290,6 @@ class Onboard extends Component {
 
   render() {
     
-    // let adventureStatus; 
-    // if(this.state.adventure){
-    //   adventureStatus = 'ADVENTURE!';
-    // }
-    // else{
-    //   adventureStatus = 'NO ADVENTURE!';
-    // }
-    // let beachStatus; 
-    // if(this.state.beaches){
-    //   beachStatus = 'Beach!';
-    // }
-    // else{
-    //   beachStatus = 'NO Beach!';
-    // }
-    // let foodStatus; 
-    // if(this.state.food){
-    //   foodStatus = 'Food!';
-    // }
-    // else{
-    //   foodStatus = 'NO Food!';
-    // }
-    // let wildlifeStatus; 
-    // if(this.state.wildlife){
-    //   wildlifeStatus = 'Wild Life!';
-    // }
-    // else{
-    //   wildlifeStatus = 'NO wild life!';
-    // }
     let countStatus;
     if(this.state.count >= 3){
       countStatus = true;
