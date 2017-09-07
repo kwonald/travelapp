@@ -5,6 +5,7 @@ import {
   ScrollView,
   StyleSheet,
   TouchableOpacity,
+  TextInput,
   Image
 } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
@@ -28,9 +29,19 @@ class MyDreamBoard extends Component {
               />
             </View>
 
-            <View style={{flex: 1, flexDirection: "row",  justifyContent: 'space-around', alignItems: 'flex-start', paddingTop: 15, paddingLeft: 5, paddingRight: 55}}>
+            <View style={{flex: 1, justifyContent: 'flex-start', alignItems: 'flex-start', paddingTop: 15, paddingLeft: 5, paddingRight: 55}}>
               <Text style={{paddingLeft: 10, fontSize: 40, fontWeight: 'bold', color: '#9013FE'}}> My Dream Board </Text>
-              <Text style={{paddingTop: 15, paddingLeft: 10, fontSize: 25, fontWeight: 'bold', color: '#9013FE'}}>  </Text>
+               <View style={{flex:1, flexDirection: 'row', justifyContent: 'center', alignItems:'flex-start', paddingTop:20, paddingLeft: 20}}>
+                  <Image
+                    style={{height:25, width:25, paddingTop: 15, paddingRight:10}}
+                    source={require('../assets/explore/SearchIcon.png')}
+                  />
+                  <TextInput
+                    style={{height: 40, paddingLeft: 15}}
+                    placeholder="Find More ..."
+                    // onChangeText={(country) => this.setState({country})}
+                  />
+                </View>
             </View>
 
             <View style={{paddingTop:30}}>
