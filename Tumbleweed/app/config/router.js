@@ -17,6 +17,7 @@ import Beaches from '../screens/Beaches';
 import Restaurants from '../screens/Restaurants';
 import Hikes from '../screens/Hikes';
 import Sports from '../screens/Sports';
+import CreateTrip from '../screens/CreateTrip';
 
 // export const FeedStack = StackNavigator({
 //   MyDreamBoard: {
@@ -163,11 +164,16 @@ export const Root = StackNavigator({
 });
 
 export const Onboarding = StackNavigator({
-  Onboarding: {
-    screen: Onboard,
-  },
+  // Onboarding: {
+  //   screen: Onboard,
+  // },
+  // add create trip 'modal' here
+  
   Root: {
     screen: Root,
+  },
+  CreateTrip: {
+    screen: CreateTrip,
   },
 }, {
   mode: 'modal',

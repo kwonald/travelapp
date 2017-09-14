@@ -515,55 +515,6 @@ class Onboard extends Component {
           </View>
           </ScrollView>
         </View>
-        {/*}
-        <View style={styles.slide1}>
-          <Text style={styles.text}>Who's Coming?</Text>
-          <TextInput
-            style={{height: 40}}
-            placeholder="Enter their email!"
-            onChangeText={(friends) => this.setState({friends})}
-          />
-          <Text style={{padding: 10, fontSize: 42}}>
-            {this.state.friends.split(' ').map((word) => word && '🐱').join(' ')}
-          </Text>
-        </View>
-        <View style={styles.slide2}>
-          <Text style={styles.text}>Have a country in mind?</Text>
-          <TextInput
-            style={{height: 40}}
-            placeholder="Enter country name or skip"
-            onChangeText={(country) => this.setState({country})}
-          />
-          <Text style={{padding: 10, fontSize: 42}}>
-            {this.state.country.split(' ').map((word) => word && '🇹🇭').join(' ')}
-          </Text>
-        </View>
-        <View style={styles.slide3}>
-          <Text style={styles.text}>Any cities in particular?</Text>
-          <TextInput
-            style={{height: 40}}
-            placeholder="Enter city name or skip"
-            onChangeText={(city) => this.setState({city})}
-          />
-          <Text style={{padding: 10, fontSize: 42}}>
-            {this.state.city.split(' ').map((word) => word && '🏙️').join(' ')}
-          </Text> 
-        </View>
-
-
-
-        <View style={styles.slide1}>
-          <Text style={styles.text}>When do you want to go?</Text>
-          
-            <Calendar
-              onDayPress={this.onDayPress}
-              style={styles.calendar}
-              hideExtraDays
-              markedDates={{[this.state.selected]: {selected: true}}} 
-            />
-          
-        </View>
-      */}
       </Swiper>
 
     );

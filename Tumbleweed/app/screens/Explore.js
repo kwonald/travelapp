@@ -45,6 +45,12 @@ class Explore extends Component {
     Alert.alert(activityname);  // activityname
   }
 
+  createTrip = () => {
+    this._hideModal();
+    this.props.navigation.navigate('CreateTrip');
+    
+  }
+
   componentDidMount(){
      return fetch('http://localhost:3000/submit_user_info.php')
       .then((response) => response.json())
@@ -410,7 +416,7 @@ class Explore extends Component {
               style={{height:70, width:350}}
               source={require('../assets/_ModernPictograms/Gif/Thumbsup_Preview.gif')}
             />
-            <TouchableOpacity onPress={this._hideModal} style={{height:100, width:350, paddingTop: 15}}>
+            <TouchableOpacity onPress={this.createTrip} style={{height:100, width:350, paddingTop: 15}}>
             <Image
               style={{height:70, width:350, }}
               source={require('../assets/explore/createtrip.png')}
