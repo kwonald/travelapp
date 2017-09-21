@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { AppRegistry, } from 'react-native';
-import { ScrollView, Image, View, Text, TextInput, TouchableOpacity, Dimensions, TouchableHighlight, StyleSheet, WebView } from 'react-native';
+import { ScrollView, Image, View, Text, TextInput, TouchableOpacity, Dimensions, TouchableHighlight, StyleSheet, WebView, Alert, Button } from 'react-native';
 import Swiper from 'react-native-swiper';
 import renderIf from '../config/renderIf';
 import DateTimePicker from 'react-native-modal-datetime-picker';
@@ -23,6 +23,46 @@ class CreateTrip extends Component {
 
 	    };
     }
+
+    InsertDataToServer = () =>{
+ 
+ 
+     const { TripName }  = this.state ;
+     const { TripType }  = this.state ;
+     const { LeavingFrom }  = this.state ;
+     const { GoingTo }  = this.state ;
+     
+     const { DeaprtDate }  = this.state ;
+     const { ReturnDate }  = this.state ;
+     
+    fetch('http://localhost:3000/createTrip.php', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        tripname: TripName,
+        triptype: TripType,
+        leavingfrom: LeavingFrom,
+        goingto: GoingTo,
+        departdate: DeaprtDate,
+        returndate: ReturnDate
+     
+      })
+     
+    }).then((response) => response.json())
+          .then((responseJson) => {
+     
+    // Showing response message coming from server after inserting records.
+            // Alert.alert(responseJson);
+     
+          }).catch((error) => {
+            // console.error(error);
+          });
+     
+     	this.refs.swiper.scrollBy(1);
+      }
 
     _showDateTimePicker = () => this.setState({ isDateTimePickerVisible: true });
  
@@ -49,39 +89,39 @@ class CreateTrip extends Component {
 	}
 
     _setTripTypeSafari = () =>{
-    	this.setState({TripType: 'safari'});
+    	this.setState({TripType: 'Safari'});
     }
 
     _setTripTypeBeach = () =>{
-    	this.setState({TripType: 'beach'});
+    	this.setState({TripType: 'Beach'});
     }
 
     _setTripTypeSpiritual = () =>{
-    	this.setState({TripType: 'spiritual'});
+    	this.setState({TripType: 'Spiritual'});
     }
 
     _setTripTypeHistoricalSites = () =>{
-    	this.setState({TripType: 'historicalSites'});
+    	this.setState({TripType: 'Historical Sites'});
     }
 
     _setTripTypeAdventure = () =>{
-    	this.setState({TripType: 'adventure'});
+    	this.setState({TripType: 'Adventure'});
     }
 
     _setTripTypeCruise = () =>{
-    	this.setState({TripType: 'cruise'});
+    	this.setState({TripType: 'Cruise'});
     }
 
     _setTripTypeRoadTrip = () =>{
-    	this.setState({TripType: 'roadTrip'});
+    	this.setState({TripType: 'Road Trip'});
     }
 
     _setTripTypeWork = () =>{
-    	this.setState({TripType: 'work'});
+    	this.setState({TripType: 'Work'});
     }
 
     _setTripTypeOther = () =>{
-    	this.setState({TripType: 'other'});
+    	this.setState({TripType: 'Other'});
     }
 
   render() {
@@ -104,6 +144,8 @@ class CreateTrip extends Component {
 			              What is the name of your trip?
 			            </Text>
     				</View>
+    				<Image style={{height: 100, width: 100}} source={{uri:'https://s3.amazonaws.com/tumbleweed-files/app/site/Public/Images/Activity/3_the-louvre-24-1.jpg'}}/>
+
 		            <Image
 			          style={{
 			            backgroundColor: '#9013FE',
@@ -508,7 +550,7 @@ class CreateTrip extends Component {
 					/>
     			</View>
 	            
-	              <TouchableHighlight style={{height:70, width:'100%', alignItems: 'center', paddingBottom: 5}} onPress={() => this.refs.swiper.scrollBy(1)}>
+	              <TouchableHighlight style={{height:70, width:'100%', alignItems: 'center', paddingBottom: 5}} onPress={this.InsertDataToServer}>
 					<Image
 	                  style={{flex:1}}
 	                  source={require('../assets/createTrip/NextBtn.png')}
@@ -516,7 +558,7 @@ class CreateTrip extends Component {
 				  </TouchableHighlight>	            
 	        </View>
 
-	    {/* Askk for recommendations or explore destination */}
+	    {/* Askk for recommendations or explore destination <Button title="Insert Text Input Data to Server" onPress={this.InsertDataToServer} color="#2196F3" />*/}
 	        <View style={styles.slide2}>
 	            <View style={{flexDirection: 'row', backgroundColor: '#9013FE', width: '100%', height: '33%'}}>
     				<View style={{justifyContent: 'center', alignItems: 'flex-start', paddingLeft: 20}}>
@@ -550,6 +592,8 @@ class CreateTrip extends Component {
 		        <Text style={{fontSize: 18}}> Congratulations on setting up your trip. </Text>
 		        <Text style={{fontSize: 12}}> What would you like to do next? </Text>
     			
+
+
 	            <TouchableHighlight style={{height:60, width:'80%', alignItems: 'center', paddingBottom: 5}} >
 				  	<View
 			          style={{

@@ -13,7 +13,7 @@
 #import <React/RCTRootView.h>
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
-
+@import HockeySDK;
 @implementation AppDelegate
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -22,6 +22,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  
+  [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"97b044af03ae44b6a836aa6354c829e6"];
+  // Do some additional configuration if needed here
+  [[BITHockeyManager sharedHockeyManager] startManager];
+  [[BITHockeyManager sharedHockeyManager].authenticator
+   authenticateInstallation];
+  
+  
   [[FBSDKApplicationDelegate sharedInstance] application:application
                            didFinishLaunchingWithOptions:launchOptions];
   

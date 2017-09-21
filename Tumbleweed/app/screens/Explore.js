@@ -10,7 +10,7 @@ class Explore extends Component {
     super(props);
     this.state = {
       isLoading: true,
-      isModalVisible: true,
+      isModalVisible: false,
     }
   }
   // state = {

@@ -12,6 +12,7 @@ import {
 import { List, ListItem, Button } from 'react-native-elements';
 import { Icon } from 'react-native-elements';
 import Modal from 'react-native-modal';
+import ModalDropdown from 'react-native-modal-dropdown';
 
 class Hikes extends Component {
   constructor(props){
@@ -22,6 +23,44 @@ class Hikes extends Component {
     }
   }
 
+
+  // use this function to add an activity to your dreamboard. 
+  InsertDataToServer = () =>{ 
+     const { TextInputName }  = this.state ;
+     const { Lastname }  = this.state ;
+     const { TextInputEmail }  = this.state ;
+     // const { TextInputPhoneNumber }  = this.state ;
+     const { Password }  = this.state ;
+     const { Username }  = this.state ;
+     
+    fetch('http://localhost:3000/createUser.php', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: TextInputName,
+        l_name: Lastname,
+        email: TextInputEmail,
+        password: Password,
+        username: Username
+     
+      })
+     
+    }).then((response) => response.json())
+          .then((responseJson) => {
+     
+    // Showing response message coming from server after inserting records.
+            Alert.alert(responseJson);
+     
+          }).catch((error) => {
+            console.error(error);
+          });
+     
+     
+  }
+
   onLearnMore = (rowData) => {
     this.props.navigation.navigate('UserDetail', rowData);
   }
@@ -29,10 +68,6 @@ class Hikes extends Component {
   _showModal = () => this.setState({ isModalVisible: true })
  
   _hideModal = () => this.setState({ isModalVisible: false })
-
-  GetItem (activityname){
-    Alert.alert(activityname);  // activityname
-  }
 
   componentDidMount(){
      return fetch('http://localhost:3000/hikes.php')
@@ -73,37 +108,62 @@ class Hikes extends Component {
 
     return (
       
-        <View style={{flex:1, backgroundColor: '#9013FE'}}>
-          <View style={{backgroundColor: '#9013FE', alignItems: 'center'}}>
+        <View style={{flex:1, backgroundColor: '#fff'}}>
+          <View style={{width: '100%', height: '30%', backgroundColor: '#fff', alignItems: 'flex-start', paddingLeft: 25, paddingBottom: 50, paddingTop: 25}}>
             <Text style={{
               fontSize:25, 
-              color: '#fff', 
-              padding: 10,
+              color: '#9013FE', 
               fontWeight: 'bold',
-            }}> Hikes </Text>
-            
+            }}> Discover </Text>
+            <View style={{ flexDirection: 'row', borderBottomColor: '#ccc', borderBottomWidth: 1, width: '80%'}}>
+              <Text style={{fontSize: 16, padding:10, color: '#9013FE', }}> City:  </Text>
+              <ModalDropdown textStyle={{fontSize: 16, padding: 10, color: '#9013FE', fontWeight: 'bold',}} options={['Vancouver', 'Bora Bora', 'Railay', 'Kenya', 'Dubai', 'Santorini']} defaultValue={'Vancouver'}/>
+              
+              {/*<Image
+                style={{height:12, width:10,}}
+                source={require('../assets/explore/ArrowIcon.png')}
+              /> */}
+            </View>
+            <View style={{flexDirection: 'row', borderBottomColor: '#ccc', borderBottomWidth: 1, width: '80%'}}>
+              <Text style={{fontSize: 16, padding:10, color: '#9013FE', }}> Category: </Text>
+              <ModalDropdown textStyle={{fontSize: 16, padding: 10, color: '#9013FE', fontWeight: 'bold'}} options={['Beaches', 'Sports', 'Hiking', 'Food', 'Spiritual', 'Festival']} defaultValue={'Hiking'}/>
+              
+              {/*<Image
+                style={{height:12, width:10,}}
+                source={require('../assets/explore/ArrowIcon.png')}
+              />*/}
+            </View>
           </View>
           <ListView
             dataSource={this.state.dataSource}
-            renderSeparator= {this.ListViewItemSeparator} 
+            // renderSeparator= {this.ListViewItemSeparator} 
             renderRow={(rowData) => 
-              <View style={{justifyContent: 'center', alignItems: 'center', paddingBottom: 15, paddingTop:15}}>
-              <TouchableOpacity onPress={()=> this.onLearnMore(rowData)} >
-              <Image
-                style={{height:150, width:250, borderRadius: 5,}}
-                source={require('../assets/explore/English-Bay.jpg')}
-              />
-
-                <Text style={styles.text}>
-                  {rowData.city}
-                </Text>
-                <Text style={styles.text}>
-                  {rowData.activityname} 
-                </Text>
+              <View style={{justifyContent: 'center', alignItems: 'center', paddingBottom: 15, paddingTop:15, width: '100%',}}>
+                <TouchableOpacity onPress={()=> this.onLearnMore(rowData)} >
+                
+                  <Image
+                      style={{height:150, width:350, borderRadius: 5, justifyContent: 'flex-start', alignItems: 'flex-end', padding: 10}}
+                      source={require('../assets/explore/English-Bay.jpg')}
+                  >
+                    <Image style={{height: 13, width: 15, borderRadius: 5, backgroundColor: 'transparent'}} source={require('../assets/explore/heartsolo.png')}/>
+                    
+                    <Image style={{height: 30, width: 30, borderRadius: 5, backgroundColor: 'transparent'}} source={require('../assets/explore/heartSaved.png')}/>
+                  
+                  </Image>
+                  {/*}
+                    <Text style={styles.text}>
+                      {rowData.city}
+                    </Text>
+                  */}
+                  <Text style={styles.text}>
+                    {rowData.activityname} 
+                  </Text>
                 </TouchableOpacity>
+                {/*}
                 <TouchableOpacity onPress={this._showModal}>
-                  <Icon name="favorite" size={35} color='#fff' style={{paddingTop:15}}/>
+                  <Icon name="favorite" size={35} color='#9013FE' style={{paddingTop:15}}/>
                 </TouchableOpacity>
+              */}
               </View>
 
           }
@@ -122,13 +182,14 @@ class Hikes extends Component {
               source={require('../assets/explore/createtrip.png')}
             />
           </TouchableOpacity>
-
+          
           <TouchableOpacity onPress={this._hideModal} style={{height:100, width:350}}>
             <Image
               style={{height:70, width:350}}
               source={require('../assets/explore/KeepExploring.png')}
             />
           </TouchableOpacity>
+ 
           </View>
         </Modal>
 
@@ -158,9 +219,10 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
   text: {
-    color: '#fff',
+    color: '#9292AF',
     fontSize: 18,
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
+    paddingTop: 20
   },
   container: {
     flex: 1,
@@ -179,3 +241,4 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+

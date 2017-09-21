@@ -30,14 +30,18 @@ class UserDetail extends Component {
             style={{height:250, width:null,}}
             source={require('../assets/explore/English-Bay.jpg')}
           />
-            <Text style={styles.header}> {activityname} </Text>
-            <View style={{flexDirection: 'row', justifyContent: 'center'}}>
+            <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+              <Text style={styles.header}> {activityname} </Text>
+              <TouchableOpacity onPress={this._showModal}>
+                <Image style={{height: 30, width: 30, borderRadius: 5, backgroundColor: 'transparent'}} source={require('../assets/explore/heartSaved.png')} />
+              </TouchableOpacity>
+            </View>
+            <View style={{flexDirection: 'row', justifyContent: 'flex-start'}}>
               <Text style={styles.location}> {city} </Text>
               <Text style={styles.location}> {country} </Text>
             </View>
-            <TouchableOpacity onPress={this._showModal}>
-                <Icon name="favorite" size={35} color='#000' style={{paddingTop:15, alignItems: 'center'}}/>
-            </TouchableOpacity>
+            
+                
             <Text style={styles.header}> Description </Text>
             <Text style={styles.bodyLabel}> {description} </Text>
 
@@ -52,11 +56,11 @@ class UserDetail extends Component {
               source={require('../assets/_ModernPictograms/Gif/Heart_Preview.gif')}
             />
             <TouchableOpacity onPress={this._hideModal} style={{height:100, width:350, paddingTop: 15}}>
-            <Image
-              style={{height:70, width:350, }}
-              source={require('../assets/explore/createtrip.png')}
-            />
-          </TouchableOpacity>
+              <Image
+                style={{height:70, width:350, }}
+                source={require('../assets/explore/createtrip.png')}
+              />
+            </TouchableOpacity>
 
           <TouchableOpacity onPress={this._hideModal} style={{height:100, width:350}}>
             <Image
@@ -73,7 +77,7 @@ class UserDetail extends Component {
 
 const styles = StyleSheet.create({
   header: {
-    fontSize: 25,
+    fontSize: 20,
     color: '#000',
     paddingTop: 15,
     paddingLeft: 15,
@@ -82,6 +86,7 @@ const styles = StyleSheet.create({
   location: {
     fontSize: 13,
     color: '#626366',
+    paddingLeft: 15,
   },
   bodyLabel: {
     fontSize:16, 
