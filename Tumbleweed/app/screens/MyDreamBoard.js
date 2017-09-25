@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 
+
 import { Icon } from 'react-native-elements';
 
 class MyDreamBoard extends Component {
@@ -19,11 +20,47 @@ class MyDreamBoard extends Component {
     this.state = {
       isLoading: true,
       isModalVisible: false,
+      key: -1,
     }
   }
 
   onLearnMore = (rowData) => {
     this.props.navigation.navigate('UserDetail', rowData);
+  }
+
+ // use this function to add an activity to your dreamboard. 
+  removeFromDreamboard = (rowData) =>{ 
+    fetch('http://localhost:3000/removeFromDreamboard.php', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        userID: 100,
+        // city: rowData.city,
+        // country: rowData.country,
+        activityID: rowData.id_activity
+        // add these two when event and places are added
+        // remember to addd these fields to the php script
+        // eventID: Username,
+        // placeID: placeID
+     
+      })
+     
+    }).then((response) => response.json())
+          .then((responseJson) => {
+     
+    // Showing response message coming from server after inserting records.
+            Alert.alert(responseJson);
+            
+     
+          }).catch((error) => {
+            console.error(error);
+          });
+
+
+     
   }
 
   componentDidMount(){
@@ -96,11 +133,12 @@ class MyDreamBoard extends Component {
                     
                       <Image
                           style={{height:150, width:350, borderRadius: 5, justifyContent: 'flex-start', alignItems: 'flex-end', padding: 10}}
-                          source={require('../assets/explore/English-Bay.jpg')}
+                          source={{uri:'https://s3.amazonaws.com/tumbleweed-files/app/site/Public/Images/Activity/' + rowData.id_activity + '_' + rowData.photo}}
                       >
-                        <Image style={{height: 13, width: 15, borderRadius: 5, backgroundColor: 'transparent'}} source={require('../assets/explore/heartsolo.png')}/>
-                        
-                        <Image style={{height: 30, width: 30, borderRadius: 5, backgroundColor: 'transparent'}} source={require('../assets/explore/heartSaved.png')}/>
+                        {/*<Image style={{height: 13, width: 15, borderRadius: 5, backgroundColor: 'transparent'}} source={require('../assets/explore/heartsolo.png')}/> */}
+                        <TouchableOpacity onPress={()=> this.removeFromDreamboard(rowData)} >
+                          <Image style={{height: 30, width: 30, borderRadius: 5, backgroundColor: 'transparent'}} source={require('../assets/explore/heartSaved.png')}/>
+                        </TouchableOpacity>
                       
                       </Image>
                       {/*}

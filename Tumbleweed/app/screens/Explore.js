@@ -10,7 +10,7 @@ class Explore extends Component {
     super(props);
     this.state = {
       isLoading: true,
-      isModalVisible: false,
+      isModalVisible: true,
     }
   }
   // state = {
@@ -94,6 +94,9 @@ class Explore extends Component {
       <ScrollView>
         
         <View style={{flex: 1,  flexDirection: "row",  justifyContent: 'space-between', alignItems: 'flex-start', paddingTop: 30, paddingLeft: 15, paddingRight: 15}}>
+
+        
+        
         <Image
             style={{height:15, width:15, paddingLeft: 15}}
             source={require('../assets/explore/BurgerMenuIcon.png')}
@@ -134,10 +137,14 @@ class Explore extends Component {
           <View style={{ flex:1, flexDirection: 'row'}}>
             <ScrollView horizontal={true}>
               <View style={{padding:5}}>
+                <TouchableOpacity onPress={this.seeAllBeaches}>
                 <Image
-                  style={{height:150, width:250,  borderRadius: 5,}}
+                  style={{height:150, width:250,  borderRadius: 5, justifyContent: 'flex-start', alignItems: 'flex-end', padding: 10}}
                   source={require('../assets/explore/English-Bay.jpg')}
-                />
+                >
+                  <Image style={{height: 13, width: 15, borderRadius: 5, backgroundColor: 'transparent'}} source={require('../assets/explore/heartsolo.png')}/>
+                </Image>
+                </TouchableOpacity>
                 <Text style={{paddingTop: 10}}> English Bay </Text>
                 <View style={{flexDirection: 'row', paddingTop:5}}>
                   <Image
@@ -149,10 +156,14 @@ class Explore extends Component {
               </View>
               
               <View style={{padding:5}}>
+              <TouchableOpacity onPress={this.seeAllBeaches}>
                 <Image
-                  style={{height:150, width:250, borderRadius: 5,}}
+                  style={{height:150, width:250, borderRadius: 5,justifyContent: 'flex-start', alignItems: 'flex-end', padding: 10}}
                   source={require('../assets/explore/Stearman-Beach.jpg')}
-                />
+                >
+                  <Image style={{height: 13, width: 15, borderRadius: 5, backgroundColor: 'transparent'}} source={require('../assets/explore/heartsolo.png')}/>
+                </Image>
+                </TouchableOpacity>
                 <Text style={{paddingTop: 10}}> Stearman Beach </Text>
                 <View style={{flexDirection: 'row', paddingTop:5}}>
                   <Image
@@ -163,10 +174,14 @@ class Explore extends Component {
                 </View>
               </View>
               <View style={{padding:5}}>
+              <TouchableOpacity onPress={this.seeAllBeaches}>
                 <Image
-                  style={{height:150, width:250, borderRadius: 5,}}
+                  style={{height:150, width:250, borderRadius: 5, justifyContent: 'flex-start', alignItems: 'flex-end', padding: 10}}
                   source={require('../assets/explore/spanishbanksbeachpark.jpg')}
-                />
+                >
+                  <Image style={{height: 13, width: 15, borderRadius: 5, backgroundColor: 'transparent'}} source={require('../assets/explore/heartsolo.png')}/>
+                </Image>
+                </TouchableOpacity>
                 <Text style={{paddingTop: 10}}> Spanish Banks </Text>
                 <View style={{flexDirection: 'row', paddingTop:5}}>
                   <Image
@@ -190,22 +205,26 @@ class Explore extends Component {
         </View>
 
         <View style={{flexDirection: 'row', paddingTop: 30, justifyContent:'space-around', alignItems: 'center'}}>
-          <Image
-            style={{justifyContent: 'center',
-            alignItems: 'center',
-            width: 150,
-            height: 150,
-            borderRadius: 5,}}
-            source={require('../assets/explore/Mountains.png')}
-          />
-          <Image
-            style={{justifyContent: 'center',
-            alignItems: 'center',
-            width: 150,
-            height: 150,
-            borderRadius: 5,}}
-            source={require('../assets/explore/Mountains.png')}
-          />
+          <TouchableOpacity onPress={this.seeAllHikes}>
+            <Image
+              style={{justifyContent: 'center',
+              alignItems: 'center',
+              width: 150,
+              height: 150,
+              borderRadius: 5,}}
+              source={require('../assets/explore/Mountains.png')}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={this.seeMustSee}>
+            <Image
+              style={{justifyContent: 'center',
+              alignItems: 'center',
+              width: 150,
+              height: 150,
+              borderRadius: 5,}}
+              source={require('../assets/explore/kids.png')}
+            />
+          </TouchableOpacity>
         </View>
 
         <View style={{paddingTop:30}}>
@@ -215,17 +234,22 @@ class Explore extends Component {
                   <Text style={{paddingTop: 25, paddingLeft: 10, paddingRight:5, fontSize: 12, fontWeight: 'normal', color: '#000'}}> SEE ALL </Text>
               </TouchableOpacity>
           </View>
-          
+
           <View style={{flexDirection: 'row',paddingTop: 20, justifyContent:'space-around', alignItems: 'center'}}>
             <View>
-               <Image
-                  style={{justifyContent: 'center',
-                  alignItems: 'center',
-                  width: 150,
-                  height: 150,
-                  borderRadius: 5,}}
-                  source={require('../assets/explore/Tacofino.jpg')}
-                />
+                <TouchableOpacity onPress={this.seeAllRestaurants}>
+                   <Image
+                      style={{justifyContent: 'center',
+                      alignItems: 'center',
+                      width: 150,
+                      height: 150,
+                      borderRadius: 5,
+                      justifyContent: 'flex-start', alignItems: 'flex-end', padding: 10}}
+                      source={require('../assets/explore/Tacofino.jpg')}
+                    >
+                      <Image style={{height: 13, width: 15, borderRadius: 5, backgroundColor: 'transparent'}} source={require('../assets/explore/heartsolo.png')}/>
+                    </Image>
+                </TouchableOpacity>
               <Text style={{paddingTop: 10}}> Tacofino </Text>
               <View style={{flexDirection: 'row', paddingTop:5}}>
                 <Image
@@ -237,14 +261,19 @@ class Explore extends Component {
             </View>
 
             <View>
+              <TouchableOpacity onPress={this.seeAllRestaurants}>
                <Image
                   style={{justifyContent: 'center',
                   alignItems: 'center',
                   width: 150,
                   height: 150,
-                  borderRadius: 5,}}
+                  borderRadius: 5,
+                justifyContent: 'flex-start', alignItems: 'flex-end', padding: 10}}
                   source={require('../assets/explore/CoastGlowbal.jpg')}
-                />
+                >
+                  <Image style={{height: 13, width: 15, borderRadius: 5, backgroundColor: 'transparent'}} source={require('../assets/explore/heartsolo.png')}/>
+                </Image>
+              </TouchableOpacity>
               <Text style={{paddingTop: 10}}> Coast, Glowbal </Text>
               <View style={{flexDirection: 'row', paddingTop:5}}>
                 <Image
@@ -258,14 +287,19 @@ class Explore extends Component {
 
           <View style={{flexDirection: 'row', paddingTop: 20, justifyContent:'space-around', alignItems: 'center'}}>
             <View>
+            <TouchableOpacity onPress={this.seeAllRestaurants}>
                <Image
                   style={{justifyContent: 'center',
                   alignItems: 'center',
                   width: 150,
                   height: 150,
-                  borderRadius: 5,}}
+                  borderRadius: 5,
+                justifyContent: 'flex-start', alignItems: 'flex-end', padding: 10}}
                   source={require('../assets/explore/hokepoke.png')}
-                />
+                >
+                  <Image style={{height: 13, width: 15, borderRadius: 5, backgroundColor: 'transparent'}} source={require('../assets/explore/heartsolo.png')}/>
+                </Image>
+              </TouchableOpacity>
               <Text style={{paddingTop: 10}}> Hoke Poke </Text>
               <View style={{flexDirection: 'row', paddingTop:5}}>
                 <Image
@@ -277,14 +311,19 @@ class Explore extends Component {
             </View>
 
             <View>
+            <TouchableOpacity onPress={this.seeAllRestaurants}>
                <Image
                 style={{justifyContent: 'center',
                 alignItems: 'center',
                 width: 150,
                 height: 150,
-                borderRadius: 5,}}
+                borderRadius: 5,
+              justifyContent: 'flex-start', alignItems: 'flex-end', padding: 10}}
                 source={require('../assets/explore/virtouspie.jpg')}
-              />
+              >
+                <Image style={{height: 13, width: 15, borderRadius: 5, backgroundColor: 'transparent'}} source={require('../assets/explore/heartsolo.png')}/>
+              </Image>
+              </TouchableOpacity>
               <Text style={{paddingTop: 10}}> Virtous Pie (Vegan) </Text>
               <View style={{flexDirection: 'row', paddingTop:5}}>
                 <Image

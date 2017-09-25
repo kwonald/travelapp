@@ -14,6 +14,7 @@ import { Icon } from 'react-native-elements';
 import Modal from 'react-native-modal';
 import ModalDropdown from 'react-native-modal-dropdown';
 
+
 class MustSee extends Component {
   constructor(props){
     super(props);
@@ -33,6 +34,41 @@ class MustSee extends Component {
 
   GetItem (activityname){
     Alert.alert(activityname);  // activityname
+  }
+
+  // use this function to add an activity to your dreamboard. 
+  addToDreamboard = (rowData) =>{ 
+    fetch('http://localhost:3000/addToDreamboard.php', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        userID: 100,
+        city: rowData.city,
+        country: rowData.country,
+        activityID: rowData.id_activity
+        // add these two when event and places are added
+        // remember to addd these fields to the php script
+        // eventID: Username,
+        // placeID: placeID
+     
+      })
+     
+    }).then((response) => response.json())
+          .then((responseJson) => {
+     
+    // Showing response message coming from server after inserting records.
+            Alert.alert(responseJson);
+            
+     
+          }).catch((error) => {
+            console.error(error);
+          });
+
+
+     
   }
 
   componentDidMount(){
@@ -74,275 +110,53 @@ class MustSee extends Component {
 
     return (
       
-        <View style={{flex:1, backgroundColor: '#6172E1'}}>
-          <ScrollView>
-          <View style={{flex: 1,  justifyContent: 'flex-start', alignItems: 'flex-start', paddingTop: 15, paddingLeft: 5, paddingRight: 55}}>
-            <Text style={{paddingLeft: 10, fontSize: 40, fontWeight: 'bold', color: '#fff'}}> Must See </Text>
-            <Text style={{paddingTop: 15, paddingLeft: 10, fontSize: 25, fontWeight: 'bold', color: '#fff'}}> Vancouver </Text>
-          </View>
-          
-          <View style={{flex: 1, flexDirection: "row",  justifyContent: 'space-around', alignItems: 'flex-start', paddingTop: 15, paddingLeft: 5, paddingRight: 55}}>
-            <Text style={{paddingLeft: 10, fontSize: 28, fontWeight: 'bold', color: '#fff'}}> Our Top 10 </Text>
-            <ModalDropdown textStyle={{fontSize: 16, padding: 10, color: 'white'}} options={['Beaches', 'Sports', 'Hiking', 'Food', 'Spiritual', 'Festival']} defaultValue={'Categories...'}/>
-          </View>
-          <View style={{paddingTop:30}}>
+
+      <View style={{flex:1, backgroundColor: '#6172E1'}}>
+          <View style={{width: '100%', height: '30%', backgroundColor: '#6172E1', alignItems: 'flex-start', paddingLeft: 25, paddingBottom: 50, paddingTop: 25}}>
+            <Text style={{
+              fontSize:25, 
+              color: '#fff', 
+              fontWeight: 'bold',
+            }}> Must See </Text>
+            <View style={{ flexDirection: 'row', borderBottomColor: '#ccc', borderBottomWidth: 1, width: '80%'}}>
+              <Text style={{fontSize: 16, padding:10, color: '#fff', }}> City:  </Text>
+              <ModalDropdown textStyle={{fontSize: 16, padding: 10, color: '#fff', fontWeight: 'bold',}} options={['Vancouver', 'Bora Bora', 'Railay', 'Kenya', 'Dubai', 'Santorini']} defaultValue={'Vancouver'}/>
+
+            </View>
             
-            <View style={{flexDirection: 'row',paddingTop: 20, justifyContent:'space-around', alignItems: 'center'}}>
-              <View>
-                 <Image
-                    style={{justifyContent: 'center',
-                    alignItems: 'center',
-                    width: 150,
-                    height: 150,
-                    borderRadius: 5,}}
-                    source={require('../assets/explore/Tacofino.jpg')}
-                  />
-                <Text style={{paddingTop: 10, color: '#fff'}}> Tacofino </Text>
-                <View style={{flexDirection: 'row', paddingTop:5}}>
-                  <Image
-                    style={{height:12, width:80,  }}
-                    source={require('../assets/explore/StarsIcons.png')}
-                   />
-                   <Text style={{fontSize: 10, color: '#fff'}}> 779 Reviews </Text>
-                </View>
-              </View>
-
-              <View>
-                 <Image
-                    style={{justifyContent: 'center',
-                    alignItems: 'center',
-                    width: 150,
-                    height: 150,
-                    borderRadius: 5,}}
-                    source={require('../assets/explore/CoastGlowbal.jpg')}
-                  />
-                <Text style={{paddingTop: 10, color: '#fff'}}> Coast, Glowbal </Text>
-                <View style={{flexDirection: 'row', paddingTop:5}}>
-                  <Image
-                    style={{height:12, width:80,  }}
-                    source={require('../assets/explore/StarsIcons.png')}
-                   />
-                   <Text style={{fontSize: 10, color: '#fff'}}> 465 Reviews </Text>
-                </View>
-              </View>           
-            </View>
-
-            <View style={{flexDirection: 'row', paddingTop: 20, justifyContent:'space-around', alignItems: 'center'}}>
-              <View>
-                 <Image
-                    style={{justifyContent: 'center',
-                    alignItems: 'center',
-                    width: 150,
-                    height: 150,
-                    borderRadius: 5,}}
-                    source={require('../assets/explore/hokepoke.png')}
-                  />
-                <Text style={{paddingTop: 10, color: '#fff'}}> Hoke Poke </Text>
-                <View style={{flexDirection: 'row', paddingTop:5}}>
-                  <Image
-                    style={{height:12, width:80,  }}
-                    source={require('../assets/explore/StarsIcons.png')}
-                   />
-                   <Text style={{fontSize: 10, color: '#fff'}}> 281 Reviews </Text>
-                </View>
-              </View>
-
-              <View>
-                 <Image
-                  style={{justifyContent: 'center',
-                  alignItems: 'center',
-                  width: 150,
-                  height: 150,
-                  borderRadius: 5,}}
-                  source={require('../assets/explore/virtouspie.jpg')}
-                />
-                <Text style={{paddingTop: 10, color: '#fff'}}> Virtous Pie (Vegan) </Text>
-                <View style={{flexDirection: 'row', paddingTop:5}}>
-                  <Image
-                    style={{height:12, width:80,  }}
-                    source={require('../assets/explore/StarsIcons.png')}
-                   />
-                   <Text style={{fontSize: 10, color: '#fff'}}> 526 Reviews </Text>
-                </View>
-              </View>
-              
-              
-            </View>
-            <View style={{flexDirection: 'row',paddingTop: 20, justifyContent:'space-around', alignItems: 'center'}}>
-              <View>
-                 <Image
-                    style={{justifyContent: 'center',
-                    alignItems: 'center',
-                    width: 150,
-                    height: 150,
-                    borderRadius: 5,}}
-                    source={require('../assets/explore/Tacofino.jpg')}
-                  />
-                <Text style={{paddingTop: 10, color: '#fff'}}> Tacofino </Text>
-                <View style={{flexDirection: 'row', paddingTop:5}}>
-                  <Image
-                    style={{height:12, width:80,  }}
-                    source={require('../assets/explore/StarsIcons.png')}
-                   />
-                   <Text style={{fontSize: 10, color: '#fff'}}> 779 Reviews </Text>
-                </View>
-              </View>
-
-              <View>
-                 <Image
-                    style={{justifyContent: 'center',
-                    alignItems: 'center',
-                    width: 150,
-                    height: 150,
-                    borderRadius: 5,}}
-                    source={require('../assets/explore/CoastGlowbal.jpg')}
-                  />
-                <Text style={{paddingTop: 10, color: '#fff'}}> Coast, Glowbal </Text>
-                <View style={{flexDirection: 'row', paddingTop:5}}>
-                  <Image
-                    style={{height:12, width:80,  }}
-                    source={require('../assets/explore/StarsIcons.png')}
-                   />
-                   <Text style={{fontSize: 10, color: '#fff'}}> 465 Reviews </Text>
-                </View>
-              </View>           
-            </View>
-
-            <View style={{flexDirection: 'row', paddingTop: 20, justifyContent:'space-around', alignItems: 'center'}}>
-              <View>
-                 <Image
-                    style={{justifyContent: 'center',
-                    alignItems: 'center',
-                    width: 150,
-                    height: 150,
-                    borderRadius: 5,}}
-                    source={require('../assets/explore/hokepoke.png')}
-                  />
-                <Text style={{paddingTop: 10, color: '#fff'}}> Hoke Poke </Text>
-                <View style={{flexDirection: 'row', paddingTop:5}}>
-                  <Image
-                    style={{height:12, width:80,  }}
-                    source={require('../assets/explore/StarsIcons.png')}
-                   />
-                   <Text style={{fontSize: 10, color: '#fff'}}> 281 Reviews </Text>
-                </View>
-              </View>
-
-              <View>
-                 <Image
-                  style={{justifyContent: 'center',
-                  alignItems: 'center',
-                  width: 150,
-                  height: 150,
-                  borderRadius: 5,}}
-                  source={require('../assets/explore/virtouspie.jpg')}
-                />
-                <Text style={{paddingTop: 10, color: '#fff'}}> Virtous Pie (Vegan) </Text>
-                <View style={{flexDirection: 'row', paddingTop:5}}>
-                  <Image
-                    style={{height:12, width:80,  }}
-                    source={require('../assets/explore/StarsIcons.png')}
-                   />
-                   <Text style={{fontSize: 10, color: '#fff'}}> 526 Reviews </Text>
-                </View>
-              </View>
-              
-              
-            </View>
-            <View style={{flexDirection: 'row',paddingTop: 20, justifyContent:'space-around', alignItems: 'center'}}>
-              <View>
-                 <Image
-                    style={{justifyContent: 'center',
-                    alignItems: 'center',
-                    width: 150,
-                    height: 150,
-                    borderRadius: 5,}}
-                    source={require('../assets/explore/Tacofino.jpg')}
-                  />
-                <Text style={{paddingTop: 10, color: '#fff'}}> Tacofino </Text>
-                <View style={{flexDirection: 'row', paddingTop:5}}>
-                  <Image
-                    style={{height:12, width:80,  }}
-                    source={require('../assets/explore/StarsIcons.png')}
-                   />
-                   <Text style={{fontSize: 10, color: '#fff'}}> 779 Reviews </Text>
-                </View>
-              </View>
-
-              <View>
-                 <Image
-                    style={{justifyContent: 'center',
-                    alignItems: 'center',
-                    width: 150,
-                    height: 150,
-                    borderRadius: 5,}}
-                    source={require('../assets/explore/CoastGlowbal.jpg')}
-                  />
-                <Text style={{paddingTop: 10, color: '#fff'}}> Coast, Glowbal </Text>
-                <View style={{flexDirection: 'row', paddingTop:5}}>
-                  <Image
-                    style={{height:12, width:80,  }}
-                    source={require('../assets/explore/StarsIcons.png')}
-                   />
-                   <Text style={{fontSize: 10, color: '#fff'}}> 465 Reviews </Text>
-                </View>
-              </View>           
-            </View>
-
           </View>
-          
-          {/*}
-          <ListView
-            dataSource={this.state.dataSource}
-            renderSeparator= {this.ListViewItemSeparator} 
-            renderRow={(rowData) => 
-              <View style={{justifyContent: 'center', alignItems: 'center', paddingBottom: 15, paddingTop:15}}>
-                <TouchableOpacity onPress={()=> this.onLearnMore(rowData)} >
-                  <Image
-                    style={{height:150, width:250, borderRadius: 5,}}
-                    source={require('../assets/explore/English-Bay.jpg')}
-                  />
 
+             <ListView
+             contentContainerStyle={styles.list}
+            dataSource={this.state.dataSource}
+            renderRow={(rowData) => 
+              <View style={{justifyContent: 'center', alignItems: 'center', paddingBottom: 15, paddingTop:15 ,width: '50%'}}>
+                <TouchableOpacity onPress={()=> this.onLearnMore(rowData)} >
+                
+                  <Image
+                      style={{height:150, width:150, borderRadius: 5, justifyContent: 'flex-start', alignItems: 'flex-end', padding: 10, margin: 3}}
+
+                      source={{uri:'https://s3.amazonaws.com/tumbleweed-files/app/site/Public/Images/Activity/' + rowData.id_activity + '_' + rowData.photo}}
+                  >
+                    {/* by clicking on the heart you add this activity/place to your dreamboard. */}
+                    <TouchableOpacity onPress={()=> this.addToDreamboard(rowData)} >
+                      <Image style={{height: 13, width: 15, borderRadius: 5, backgroundColor: 'transparent'}} source={require('../assets/explore/heartsolo.png')}/>
+                    </TouchableOpacity>
+                    {/*                  
+                    <Image style={{height: 30, width: 30, borderRadius: 5, backgroundColor: 'transparent'}} source={require('../assets/explore/heartSaved.png')}/>
+                  */}
+
+                  </Image>
                   <Text style={styles.text}>
-                    {rowData.city}
-                  </Text>
-                  <Text style={styles.text}>
-                    {rowData.activityname} 
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={this._showModal}>
-                  <Icon name="favorite" size={35} color='#fff' style={{paddingTop:15}}/>
+                     {rowData.activityname} 
+                   </Text>
                 </TouchableOpacity>
               </View>
 
-            }
-          />
-        */}
+          }
+ 
+        />
 
-
-          <Modal isVisible={this.state.isModalVisible}>
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-              <Text style={{fontSize: 18, color: '#fff', fontWeight: 'bold', paddingBottom: 40}}> Added To Your Dreamboard! </Text>
-               <Image
-                style={{height:70, width:350}}
-                source={require('../assets/_ModernPictograms/Gif/Heart_Preview.gif')}
-              />
-              <TouchableOpacity onPress={this._hideModal} style={{height:100, width:350, paddingTop: 15}}>
-              <Image
-                style={{height:70, width:350, }}
-                source={require('../assets/explore/createtrip.png')}
-              />
-            </TouchableOpacity>
-
-            <TouchableOpacity onPress={this._hideModal} style={{height:100, width:350}}>
-              <Image
-                style={{height:70, width:350}}
-                source={require('../assets/explore/KeepExploring.png')}
-              />
-            </TouchableOpacity>
-            </View>
-          </Modal>
-          </ScrollView>
         </View>
       
     );
@@ -352,7 +166,12 @@ class MustSee extends Component {
 export default MustSee;
 
 const styles = StyleSheet.create({
-
+list: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        alignItems: 'flex-start'
+    },
+  
   MainContainer :{
   // Setting up View inside content in Vertically center.
   justifyContent: 'center',
@@ -370,7 +189,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#fff',
-    fontSize: 18,
+    fontSize: 12,
     fontWeight: 'bold',
   },
   container: {

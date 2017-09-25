@@ -26,7 +26,7 @@ var Login = React.createClass({
               } else if (result.isCancelled) {
                 alert("Login was cancelled");
               } else {
-                alert("Login was successful with permissions: " + result.grantedPermissions)
+                alert("Login was successful with permissions: " + result.grantedPermissions);
               }
             }
           }
@@ -346,6 +346,9 @@ class Onboard extends Component {
       boating: false,
       roadtrip: false,
       count: 0,
+
+      loggedIn: true,
+
       TextInputName: '',
 
       Lastname: '',
@@ -372,79 +375,7 @@ class Onboard extends Component {
     }
     return (
         
-       <Swiper style={styles.wrapper} loop={false} showsButtons={true} showsPagination={false}>
-   
-
-        <View style={styles.slide1}>
-          <TextInput
-          
-            // Adding hint in Text Input using Place holder.
-            placeholder="Enter First Name"
-   
-            onChangeText={TextInputName => this.setState({TextInputName})}
-   
-            // Making the Under line Transparent.
-            underlineColorAndroid='transparent'
-   
-            style={styles.TextInputStyleClass}
-          />
-
-          <TextInput
-          
-            // Adding hint in Text Input using Place holder.
-            placeholder="Enter Last Name"
-   
-            onChangeText={Lastname => this.setState({Lastname})}
-   
-            // Making the Under line Transparent.
-            underlineColorAndroid='transparent'
-   
-            style={styles.TextInputStyleClass}
-          />
-   
-          <TextInput
-            
-            // Adding hint in Text Input using Place holder.
-            placeholder="Enter Email"
-   
-            onChangeText={TextInputEmail => this.setState({TextInputEmail})}
-   
-            // Making the Under line Transparent.
-            underlineColorAndroid='transparent'
-   
-            style={styles.TextInputStyleClass}
-          />
-
-           <TextInput
-                    
-            // Adding hint in Text Input using Place holder.
-            placeholder="Enter Username"
-   
-            onChangeText={Username => this.setState({Username})}
-   
-            // Making the Under line Transparent.
-            underlineColorAndroid='transparent'
-   
-            style={styles.TextInputStyleClass}
-            />
-
-          <TextInput
-            
-            // Adding hint in Text Input using Place holder.
-            placeholder="Enter Password"
-   
-            onChangeText={Password => this.setState({Password})}
-   
-            // Making the Under line Transparent.
-            underlineColorAndroid='transparent'
-   
-            style={styles.TextInputStyleClass}
-          />
-  
-   
-          <Button title="Insert Text Input Data to Server" onPress={this.InsertDataToServer} color="#2196F3" />
-
-        </View>
+       <Swiper ref='swiper' style={styles.wrapper} loop={false} showsButtons={false} showsPagination={false} pagingEnabled={true} scrollEnabled={false}>
         <View style={styles.slide1}>
         <Image
           style={{
@@ -467,6 +398,22 @@ class Onboard extends Component {
               </Text>
             </View>
             <Login />
+
+            {renderIf(this.state.loggedIn, 
+                <TouchableHighlight style={{height:70, width:'100%', alignItems: 'center', paddingBottom: 5}} onPress={() => this.refs.swiper.scrollBy(1)}>
+                  <Image
+                      style={{flex:1}}
+                      source={require('../assets/createTrip/NextBtn.png')}
+                    />
+                </TouchableHighlight>
+              )}
+
+              {renderIf(!this.state.loggedIn,
+                <View style= {{height: 70, width: '100%', paddingBottom: 5}}/>
+              )}
+
+
+
           </Image>
 
         </View>
@@ -490,46 +437,24 @@ class Onboard extends Component {
             placeholder="Enter your hometown here!"
             onChangeText={(text) => this.setState({text})}
           />
+          <TouchableHighlight style={{height:70, width:'100%', alignItems: 'center', paddingBottom: 5}} onPress={() => this.refs.swiper.scrollBy(1)}>
+            <Image
+                style={{flex:1}}
+                source={require('../assets/createTrip/NextBtn.png')}
+              />
+          </TouchableHighlight>
           
         </View>
 
         <View style={styles.slide3}>
-        <ScrollView>
-        
-        {/*}
-        <Text style={{fontSize:16, color: '#bcd756', paddingTop: 15,}}> {adventureStatus} </Text>
-        <Text style={{fontSize:16, color: '#bcd756', paddingTop: 15,}}> {beachStatus} </Text>
-        <Text style={{fontSize:16, color: '#bcd756', paddingTop: 15,}}> {foodStatus} </Text>
-        <Text style={{fontSize:16, color: '#bcd756', paddingTop: 15,}}> {wildlifeStatus} </Text>  
-        <Text style={{fontSize:16, color: '#bcd756', paddingTop: 15,}}> {this.state.count} </Text>
-        <TouchableOpacity onPress={this._showModal}>
-          <Text>Show Modal</Text>
-        </TouchableOpacity>
-        <Modal isVisible={this.state.isModalVisible}>
-          <View style={{ flex: 1 }}>
-            <TouchableOpacity onPress={this._onPressButton} style={{height:100, width:350}}>
-            <Image
-              style={{height:70, width:350}}
-              source={require('../assets/onboarding/ReserveButton.png')}
-            />
-          </TouchableOpacity>
-          </View>
-        </Modal>
-      */}
-          
+
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
           <Text style={styles.text1}>Final Step</Text>
           <Text style={styles.text2}>What are your travel interests?</Text>
           <Text style={styles.text3}>Pick any 3 to start</Text>
-          {renderIf(countStatus, 
-              <TouchableOpacity onPress={this._onPressButton} style={{height:100, width:350}}>
-                <Image
-                  style={{height:70, width:350}}
-                  source={require('../assets/onboarding/ReserveButton.png')}
-                />
-              </TouchableOpacity>
-            )}
+          
           </View>
+          <ScrollView> 
           <View styl={{flexDirection:'column'}}>
             <View style={{flexDirection:'row'}}>
               <TouchableOpacity onPress={this._onPressButtonAdventure} style={styles.buttonWrapper}>
@@ -631,6 +556,14 @@ class Onboard extends Component {
 
           </View>
           </ScrollView>
+          {renderIf(countStatus, 
+              <TouchableOpacity onPress={this._onPressButton} style={{height:100, width:350}}>
+                <Image
+                  style={{height:70, width:350}}
+                  source={require('../assets/onboarding/ReserveButton.png')}
+                />
+              </TouchableOpacity>
+            )}
         </View>
       </Swiper>
 

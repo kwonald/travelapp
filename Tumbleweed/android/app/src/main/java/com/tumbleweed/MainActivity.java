@@ -1,6 +1,7 @@
 package com.tumbleweed;
 
 import com.facebook.react.ReactActivity;
+import com.slowpath.hockeyapp.RNHockeyAppPackage;
 
 public class MainActivity extends ReactActivity {
 

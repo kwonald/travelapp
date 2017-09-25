@@ -26,7 +26,7 @@ class CreateTrip extends Component {
 
     InsertDataToServer = () =>{
  
- 
+ // id_usario, city, country, id_activity, id_event, id_place
      const { TripName }  = this.state ;
      const { TripType }  = this.state ;
      const { LeavingFrom }  = this.state ;
@@ -136,7 +136,7 @@ class CreateTrip extends Component {
     	<Swiper ref='swiper' style={styles.wrapper} loop={false} showsButtons={false} showsPagination={false} pagingEnabled={true} scrollEnabled={false}>
     	
 
-    		{/* Set name of your trip */}
+    		{/* Set name of your trip <Image style={{height: 100, width: 100}} source={{uri:'https://s3.amazonaws.com/tumbleweed-files/app/site/Public/Images/Activity/3_the-louvre-24-1.jpg'}}/>*/}
     		<View style={styles.slide1}>
     			<View style={{flexDirection: 'row', backgroundColor: '#9013FE', width: '100%', height: '33%'}}>
     				<View style={{justifyContent: 'center', alignItems: 'flex-start', paddingLeft: 20}}>
@@ -144,7 +144,7 @@ class CreateTrip extends Component {
 			              What is the name of your trip?
 			            </Text>
     				</View>
-    				<Image style={{height: 100, width: 100}} source={{uri:'https://s3.amazonaws.com/tumbleweed-files/app/site/Public/Images/Activity/3_the-louvre-24-1.jpg'}}/>
+    				
 
 		            <Image
 			          style={{

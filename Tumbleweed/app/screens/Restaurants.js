@@ -24,27 +24,23 @@ class Restaurants extends Component {
   }
 
 
-  // use this function to add an activity to your dreamboard. 
-  InsertDataToServer = () =>{ 
-     const { TextInputName }  = this.state ;
-     const { Lastname }  = this.state ;
-     const { TextInputEmail }  = this.state ;
-     // const { TextInputPhoneNumber }  = this.state ;
-     const { Password }  = this.state ;
-     const { Username }  = this.state ;
-     
-    fetch('http://localhost:3000/createUser.php', {
+ // use this function to add an activity to your dreamboard. 
+  addToDreamboard = (rowData) =>{ 
+    fetch('http://localhost:3000/addToDreamboard.php', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        name: TextInputName,
-        l_name: Lastname,
-        email: TextInputEmail,
-        password: Password,
-        username: Username
+        userID: 100,
+        city: rowData.city,
+        country: rowData.country,
+        activityID: rowData.id_activity
+        // add these two when event and places are added
+        // remember to addd these fields to the php script
+        // eventID: Username,
+        // placeID: placeID
      
       })
      
@@ -53,12 +49,12 @@ class Restaurants extends Component {
      
     // Showing response message coming from server after inserting records.
             Alert.alert(responseJson);
+            
      
           }).catch((error) => {
             console.error(error);
           });
-     
-     
+   
   }
 
   onLearnMore = (rowData) => {
@@ -143,12 +139,17 @@ class Restaurants extends Component {
                 
                   <Image
                       style={{height:150, width:350, borderRadius: 5, justifyContent: 'flex-start', alignItems: 'flex-end', padding: 10}}
-                      source={require('../assets/explore/English-Bay.jpg')}
+                      source={{uri:'https://s3.amazonaws.com/tumbleweed-files/app/site/Public/Images/Activity/' + rowData.id_activity + '_' + rowData.photo}}
                   >
-                    <Image style={{height: 13, width: 15, borderRadius: 5, backgroundColor: 'transparent'}} source={require('../assets/explore/heartsolo.png')}/>
-                    
+                    {/* by clicking on the heart you add this activity/place to your dreamboard. */}
+                    <TouchableOpacity onPress={()=> this.addToDreamboard(rowData)} >
+                      <Image style={{height: 13, width: 15, borderRadius: 5, backgroundColor: 'transparent'}} source={require('../assets/explore/heartsolo.png')}/>
+                    </TouchableOpacity>
+                    {/*                  
                     <Image style={{height: 30, width: 30, borderRadius: 5, backgroundColor: 'transparent'}} source={require('../assets/explore/heartSaved.png')}/>
-                  
+                  */}
+
+
                   </Image>
                   {/*}
                     <Text style={styles.text}>

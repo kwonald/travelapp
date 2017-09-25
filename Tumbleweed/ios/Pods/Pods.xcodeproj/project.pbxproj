@@ -1,0 +1,917 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		034F6BF87B11EFC7171144FD31993C02 /* feedbackActivity~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 94FFC6D1BE3A4537F2C334DBA36FF434 /* feedbackActivity~ipad.png */; };
+		0A9ED6AAA5EE93F76F69579EEE1BF2FE /* Rectangle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FFD04CEA394C33CF54F2733FA70638E /* Rectangle@2x.png */; };
+		0C7B08590B13FDCB31E05F09C69D02E8 /* iconCamera.png in Resources */ = {isa = PBXBuildFile; fileRef = E77D53D85E78FF0653E58616A54A3F0A /* iconCamera.png */; };
+		0CA78AC46C03FD0677D2BD70F763AA5D /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4DCE79D60E344080641848EBB84E3C1C /* pt.lproj */; };
+		0DEE853791B70F89F9566418B1B472F7 /* Pods-Tumbleweed-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 355EFA8BC7624871736CA51034E768C7 /* Pods-Tumbleweed-dummy.m */; };
+		18C8FE31C992810CC728A5AFEDAA7F13 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 00DF82C5D029910007CE7802FA226D29 /* es.lproj */; };
+		1A2180E0DC0BA0B0C7B5CE3ACD2A6768 /* iconCamera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4D572C90659CFD1A7BBCCE771CBE837 /* iconCamera@2x.png */; };
+		1A434D26CCA5BDDFD62A1C92FF4CE93C /* buttonRoundedRegularHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F19BFA2EF7CDDACEB191C66E86F9CF26 /* buttonRoundedRegularHighlighted@2x.png */; };
+		21AF0368D2A74AE7CACCDF04BDD015FF /* authorize_denied@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 855630EF79AD9AA5A58F9DABD6246854 /* authorize_denied@3x.png */; };
+		2893823E9CB1E5776F122C091C03B4F7 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2AAD4A5D2673408637D7279995299734 /* de.lproj */; };
+		298A8CF1F92121EE8975416E1B42DA96 /* buttonRoundedRegularHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = F34EF800CB0ED548AAFD0625AB059C9C /* buttonRoundedRegularHighlighted.png */; };
+		2B196B950858F08FF975A2246D64C9F7 /* Cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = B19A7B2D7DCA6B664B58E10CEE0C9203 /* Cancel.png */; };
+		2F5E6CBD401998573AD5FE0E464262B1 /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6FEA5B6E51FB32F0B015225BCF624092 /* ja.lproj */; };
+		37392B4D7291215B441E1043E98067F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		3D8D9920EE3EF913B602FFEEB8C0A695 /* buttonRoundedRegular@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 454864B1857715D2C51536420F4FFB21 /* buttonRoundedRegular@2x.png */; };
+		3D9524F690E8C682CA151F6A071BC937 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 05D3CBF2D23FA12DF52B88D63391B1A6 /* zh-Hans.lproj */; };
+		44A7EACB545AABDD70E670102CF8C17C /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1342E40D99357D2BE79A0FADC7F943C2 /* Arrow.png */; };
+		491750401A9EFDFD245721E7BE4627C6 /* Blur.png in Resources */ = {isa = PBXBuildFile; fileRef = 734F4335334F6982656494A53CB8A789 /* Blur.png */; };
+		4CCBA4C92CA1EEF80DB166BBEE0E0920 /* feedbackActivity@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655C08E7824601202493C28BBB3C3439 /* feedbackActivity@3x.png */; };
+		4F72D084AB1AB0385AFA896BD39BE97D /* Ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F09F3D22619B07601EFB8E2BFA17F9 /* Ok.png */; };
+		546C2C92080EDDC0E0991C5D93D85C8C /* Ok@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6594698FEE8A4E0CEA4B2A4419F0E1D0 /* Ok@2x.png */; };
+		628CFA12EF791C1D1C8B64A21CD14FD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		62B3B2FF935934D79D6A3F98DD9A3310 /* nb.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 8C126DE54DD41BEBE09D1136F041813D /* nb.lproj */; };
+		67CD82782BD1B0E3D61179A03E1D551C /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E121C0B8695259AF55A57A7D6A2D44F1 /* it.lproj */; };
+		699B49B0E0F19F10F2780A0DB6878495 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		6F35985538D059073ADF34294A4CD93C /* IconGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = E5104F3C80BA8C7528592D006E0E82A5 /* IconGradient.png */; };
+		6FEEAB6B0BF65AD3A4B262D249393BB5 /* Ok@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5740B6EEAEB479021FDC7C73B5E2B01 /* Ok@3x.png */; };
+		7C074DD39BC70B9C2FEA1DDC557D1E51 /* authorize_denied@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C695F7EC0B9E548F5A12D46A2BA223C /* authorize_denied@2x.png */; };
+		7F5F10E74ED8034D89B93DFEB5CFD539 /* Cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5778BA291821FA85A1A6C95694FBFBA /* Cancel@3x.png */; };
+		8055D3FC20CCE9BC4F44626203C81745 /* feedbackActivity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6CF435D8A85D06A5F1EB7F73CD014C8 /* feedbackActivity@2x.png */; };
+		8092BB02C170FE0923AD7E7A3640FB24 /* buttonRoundedDelete.png in Resources */ = {isa = PBXBuildFile; fileRef = 2962E8C1951575EBDD4A9EE4F9D73466 /* buttonRoundedDelete.png */; };
+		82A484029E7E614526A7FD2C1366AC39 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = CC8DCCBAEF1A3B82295C7C2B3D810159 /* en.lproj */; };
+		83AA80C4C4288E95D1ED250B7A53B1DB /* authorize_denied.png in Resources */ = {isa = PBXBuildFile; fileRef = B42D67B4B83B28AEFFD2047759BED21E /* authorize_denied.png */; };
+		84004D40E25E334F16B4D70D53BF149F /* buttonRoundedDeleteHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5807FD57A37BA38071A2156EB5F393 /* buttonRoundedDeleteHighlighted.png */; };
+		87CFB536A253F968FED77C5A75DC8847 /* Blur@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E450709799F7F2F920A3898DCB6C570E /* Blur@2x.png */; };
+		8C115D2276DEB53520730E0B8791BE0F /* pt-PT.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9042C73619F7E1FA2D314D9909585AB1 /* pt-PT.lproj */; };
+		90C28D94DAD18307A25CF195A78B18DF /* FeedbackPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 13871F6C20D3710290C817BD8DBD93B8 /* FeedbackPlaceholder.png */; };
+		927F2545D650AD499F0114FC9E7C6341 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 8AA92B6EEB1857CA15FF54D41BB00F32 /* fr.lproj */; };
+		947E44184B30403F13924C59A1E3B3EE /* hu.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 223FB3F1860D20CE0AEE3705DB3A75C1 /* hu.lproj */; };
+		9BC767136A627318026727B775DC290F /* Rectangle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DBFD566A4DFBDF77984A70082E5BD7C /* Rectangle@3x.png */; };
+		9F1E42A64A0982335FB22EA98BADA1CF /* feedbackActivity.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1F65454D341983D231215C057F689A /* feedbackActivity.png */; };
+		A18DD09A116B5BFA895E52DBB9E05B4A /* Arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46EA99ADC684120A6F9DC266CAD014C1 /* Arrow@2x.png */; };
+		ACE32A0A30642056880DC51F9EBDCDDD /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A90193780E25F1F078067899728402BC /* ru.lproj */; };
+		AF756DF0D4B06480BBEA3BBF81A81D13 /* buttonRoundedDeleteHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5483A24D2B9F7917191DE8A85829B605 /* buttonRoundedDeleteHighlighted@2x.png */; };
+		B9EDCE6E451154EB487F04EF2F4EF2A9 /* AppIconPlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = A018F84C1ABFC5C5DCE138A1C4618D17 /* AppIconPlaceHolder.png */; };
+		B9F73AF90155DC7BF384CC66D2A2A8F9 /* Pods-TumbleweedTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5929A02134B97EE2E268C3957CC9D356 /* Pods-TumbleweedTests-dummy.m */; };
+		C6E03FE266AC3767805DE30EC71059C1 /* Blur@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8779048BC02896DAB37AF583C63133D3 /* Blur@3x.png */; };
+		C6E9DDF394B9D50179A07335F0AB5863 /* hr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D3B30CD4C77547FB4D25EBE7BFC21FDF /* hr.lproj */; };
+		CC5FD2D069557A5B89BC1879996276D7 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 811CDE77AA0C808A2C5A09125B32EDBC /* nl.lproj */; };
+		CD9FB0D75EDC3673AAA051DED29F9490 /* buttonRoundedDelete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3712C6D928841683464E623E20C61434 /* buttonRoundedDelete@2x.png */; };
+		D04B99BD1CFCF232405B6F90B87D5E53 /* fa.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 238C67997324F051DCA0754D74A5FC01 /* fa.lproj */; };
+		D159D6E8C53C26C0D612732D312247D8 /* Pods-Tumbleweed-tvOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFA184405DBA6719AB8F53E140A4928 /* Pods-Tumbleweed-tvOSTests-dummy.m */; };
+		D34E43E323C6A19985196C4D8F0A61D8 /* buttonRoundedRegular.png in Resources */ = {isa = PBXBuildFile; fileRef = 8290E8E1B3B06086211DC0FF6D788DD3 /* buttonRoundedRegular.png */; };
+		DFDE46266B9D8D56D4656A33A14309B0 /* Rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2DE10AF1A636C515581AD6851ACCF1 /* Rectangle.png */; };
+		F2852A28C22BF89F8787A33932048DB9 /* IconGradient@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E5198B09B443AE419A5310064FCD8D9 /* IconGradient@2x.png */; };
+		F5A90570C26448C498D553B5042EC63F /* Cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89B70C12C89D36DABC6BE480EE95EE2D /* Cancel@2x.png */; };
+		F7832D722DC20EA1887B494B5E50969F /* feedbackActivity@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FA236FE8FC9DB68974F48AF03537D50 /* feedbackActivity@2x~ipad.png */; };
+		F93D762E66C4C543A0BB8B71CEB9CBE8 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E10DA5B8441DEB7A7C1A5F8384474A99 /* bg.png */; };
+		FB6510577C9EB0624EDF73879DC61B45 /* Arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C85E928DC95E520B24883DE149BEC62 /* Arrow@3x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26DCE97F474B0A68B87899DE84904851 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB9AD825427F216B54E693242E671FA1;
+			remoteInfo = "HockeySDK-HockeySDKResources";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00DF82C5D029910007CE7802FA226D29 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/es.lproj"; sourceTree = "<group>"; };
+		03F39BCC68D5BBF0307BC6CA2C742E76 /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HockeySDK.framework; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework"; sourceTree = "<group>"; };
+		05D3CBF2D23FA12DF52B88D63391B1A6 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/zh-Hans.lproj"; sourceTree = "<group>"; };
+		06991588C5D05A75BA58C60D7E37DEDC /* Pods-Tumbleweed-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tumbleweed-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		072DE3C795A13A293CC90800EE3BE1F5 /* Pods-Tumbleweed-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tumbleweed-resources.sh"; sourceTree = "<group>"; };
+		0C695F7EC0B9E548F5A12D46A2BA223C /* authorize_denied@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "authorize_denied@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/authorize_denied@2x.png"; sourceTree = "<group>"; };
+		0FA236FE8FC9DB68974F48AF03537D50 /* feedbackActivity@2x~ipad.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "feedbackActivity@2x~ipad.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity@2x~ipad.png"; sourceTree = "<group>"; };
+		11D20F9FE7681E1FB0D3ECC0C41D99DE /* Pods-TumbleweedTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TumbleweedTests-resources.sh"; sourceTree = "<group>"; };
+		1342E40D99357D2BE79A0FADC7F943C2 /* Arrow.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Arrow.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Arrow.png"; sourceTree = "<group>"; };
+		13871F6C20D3710290C817BD8DBD93B8 /* FeedbackPlaceholder.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = FeedbackPlaceholder.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/FeedbackPlaceholder.png"; sourceTree = "<group>"; };
+		162FA57F916EE769B375AC0E8FBECD39 /* libPods-Tumbleweed-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Tumbleweed-tvOSTests.a"; path = "libPods-Tumbleweed-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21ECD471960CB670D6BFE72000DA12FA /* Pods-Tumbleweed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tumbleweed.release.xcconfig"; sourceTree = "<group>"; };
+		223FB3F1860D20CE0AEE3705DB3A75C1 /* hu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = hu.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/hu.lproj"; sourceTree = "<group>"; };
+		237ABABDC84C54B7BB1CFA07DBE47C5A /* ResourceBundle-HockeySDKResources-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-HockeySDKResources-Info.plist"; sourceTree = "<group>"; };
+		238C67997324F051DCA0754D74A5FC01 /* fa.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fa.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/fa.lproj"; sourceTree = "<group>"; };
+		2962E8C1951575EBDD4A9EE4F9D73466 /* buttonRoundedDelete.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = buttonRoundedDelete.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedDelete.png"; sourceTree = "<group>"; };
+		2AAD4A5D2673408637D7279995299734 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/de.lproj"; sourceTree = "<group>"; };
+		2D2B49C54F37B2BC1F9EB71AF1FBD14D /* libPods-Tumbleweed.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Tumbleweed.a"; path = "libPods-Tumbleweed.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33B308429AAEE38BAEF62BC8CC5A6B5E /* Pods-Tumbleweed-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tumbleweed-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		355EFA8BC7624871736CA51034E768C7 /* Pods-Tumbleweed-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tumbleweed-dummy.m"; sourceTree = "<group>"; };
+		3712C6D928841683464E623E20C61434 /* buttonRoundedDelete@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "buttonRoundedDelete@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedDelete@2x.png"; sourceTree = "<group>"; };
+		3DAC734F296DE79FCB4984A1E96932CD /* libPods-TumbleweedTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TumbleweedTests.a"; path = "libPods-TumbleweedTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DBFD566A4DFBDF77984A70082E5BD7C /* Rectangle@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Rectangle@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Rectangle@3x.png"; sourceTree = "<group>"; };
+		454864B1857715D2C51536420F4FFB21 /* buttonRoundedRegular@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "buttonRoundedRegular@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedRegular@2x.png"; sourceTree = "<group>"; };
+		45827F7D8712875CBA1A1B29C13E5A97 /* Pods-TumbleweedTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TumbleweedTests-frameworks.sh"; sourceTree = "<group>"; };
+		4634F68368A2F91230739A7832BD0939 /* Pods-TumbleweedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TumbleweedTests.release.xcconfig"; sourceTree = "<group>"; };
+		46EA99ADC684120A6F9DC266CAD014C1 /* Arrow@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Arrow@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Arrow@2x.png"; sourceTree = "<group>"; };
+		4C978E160B7B1C00BC7EF9250136868B /* Pods-Tumbleweed-tvOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tumbleweed-tvOSTests-resources.sh"; sourceTree = "<group>"; };
+		4DCE79D60E344080641848EBB84E3C1C /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pt.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/pt.lproj"; sourceTree = "<group>"; };
+		50F09F3D22619B07601EFB8E2BFA17F9 /* Ok.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Ok.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Ok.png"; sourceTree = "<group>"; };
+		5483A24D2B9F7917191DE8A85829B605 /* buttonRoundedDeleteHighlighted@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "buttonRoundedDeleteHighlighted@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedDeleteHighlighted@2x.png"; sourceTree = "<group>"; };
+		5929A02134B97EE2E268C3957CC9D356 /* Pods-TumbleweedTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TumbleweedTests-dummy.m"; sourceTree = "<group>"; };
+		5FFD04CEA394C33CF54F2733FA70638E /* Rectangle@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Rectangle@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Rectangle@2x.png"; sourceTree = "<group>"; };
+		655C08E7824601202493C28BBB3C3439 /* feedbackActivity@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "feedbackActivity@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity@3x.png"; sourceTree = "<group>"; };
+		6594698FEE8A4E0CEA4B2A4419F0E1D0 /* Ok@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Ok@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Ok@2x.png"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6B2DE10AF1A636C515581AD6851ACCF1 /* Rectangle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Rectangle.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Rectangle.png"; sourceTree = "<group>"; };
+		6FEA5B6E51FB32F0B015225BCF624092 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/ja.lproj"; sourceTree = "<group>"; };
+		734F4335334F6982656494A53CB8A789 /* Blur.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Blur.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Blur.png"; sourceTree = "<group>"; };
+		7C37F105F2142F280CDD6640C1B3AEAF /* Pods-Tumbleweed-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tumbleweed-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7D7BA2AB747787121526147811E1E541 /* Pods-Tumbleweed-tvOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tumbleweed-tvOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		7E5198B09B443AE419A5310064FCD8D9 /* IconGradient@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "IconGradient@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/IconGradient@2x.png"; sourceTree = "<group>"; };
+		811CDE77AA0C808A2C5A09125B32EDBC /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nl.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/nl.lproj"; sourceTree = "<group>"; };
+		8290E8E1B3B06086211DC0FF6D788DD3 /* buttonRoundedRegular.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = buttonRoundedRegular.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedRegular.png"; sourceTree = "<group>"; };
+		855630EF79AD9AA5A58F9DABD6246854 /* authorize_denied@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "authorize_denied@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/authorize_denied@3x.png"; sourceTree = "<group>"; };
+		872A01CD5FCFD0180F6B858F5236A5A1 /* Pods-Tumbleweed-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tumbleweed-acknowledgements.plist"; sourceTree = "<group>"; };
+		8779048BC02896DAB37AF583C63133D3 /* Blur@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Blur@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Blur@3x.png"; sourceTree = "<group>"; };
+		89B70C12C89D36DABC6BE480EE95EE2D /* Cancel@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Cancel@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Cancel@2x.png"; sourceTree = "<group>"; };
+		8AA92B6EEB1857CA15FF54D41BB00F32 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/fr.lproj"; sourceTree = "<group>"; };
+		8C126DE54DD41BEBE09D1136F041813D /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nb.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/nb.lproj"; sourceTree = "<group>"; };
+		9042C73619F7E1FA2D314D9909585AB1 /* pt-PT.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-PT.lproj"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/pt-PT.lproj"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94FFC6D1BE3A4537F2C334DBA36FF434 /* feedbackActivity~ipad.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "feedbackActivity~ipad.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity~ipad.png"; sourceTree = "<group>"; };
+		99E3F18FB90798BBC116B8F22F9C62DD /* Pods-Tumbleweed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tumbleweed.debug.xcconfig"; sourceTree = "<group>"; };
+		9B1F65454D341983D231215C057F689A /* feedbackActivity.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = feedbackActivity.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity.png"; sourceTree = "<group>"; };
+		9C85E928DC95E520B24883DE149BEC62 /* Arrow@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Arrow@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Arrow@3x.png"; sourceTree = "<group>"; };
+		9EAD63A2CFAF937E4099036B151A6069 /* Pods-Tumbleweed-tvOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tumbleweed-tvOSTests-frameworks.sh"; sourceTree = "<group>"; };
+		9EF0C8847183FA3A88B952234361D6B5 /* Pods-Tumbleweed-tvOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tumbleweed-tvOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A018F84C1ABFC5C5DCE138A1C4618D17 /* AppIconPlaceHolder.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = AppIconPlaceHolder.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/AppIconPlaceHolder.png"; sourceTree = "<group>"; };
+		A30630F52F101A3510402C79D824D80F /* HockeySDKResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = HockeySDKResources.bundle; path = HockeySDKResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A90193780E25F1F078067899728402BC /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ru.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/ru.lproj"; sourceTree = "<group>"; };
+		AC5807FD57A37BA38071A2156EB5F393 /* buttonRoundedDeleteHighlighted.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = buttonRoundedDeleteHighlighted.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedDeleteHighlighted.png"; sourceTree = "<group>"; };
+		B19A7B2D7DCA6B664B58E10CEE0C9203 /* Cancel.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Cancel.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Cancel.png"; sourceTree = "<group>"; };
+		B2EEABCBAB643140F21875EA573D65E6 /* Pods-TumbleweedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TumbleweedTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B42D67B4B83B28AEFFD2047759BED21E /* authorize_denied.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = authorize_denied.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/authorize_denied.png"; sourceTree = "<group>"; };
+		B6CF435D8A85D06A5F1EB7F73CD014C8 /* feedbackActivity@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "feedbackActivity@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity@2x.png"; sourceTree = "<group>"; };
+		BBFA184405DBA6719AB8F53E140A4928 /* Pods-Tumbleweed-tvOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tumbleweed-tvOSTests-dummy.m"; sourceTree = "<group>"; };
+		C1756A6CFFD89B6E9F1E9D5A20E1B4A3 /* Pods-Tumbleweed-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tumbleweed-frameworks.sh"; sourceTree = "<group>"; };
+		C5778BA291821FA85A1A6C95694FBFBA /* Cancel@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Cancel@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Cancel@3x.png"; sourceTree = "<group>"; };
+		CBA1817D1E2E39E77C61B6AE166991D9 /* Pods-TumbleweedTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TumbleweedTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		CC8DCCBAEF1A3B82295C7C2B3D810159 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/en.lproj"; sourceTree = "<group>"; };
+		D3B30CD4C77547FB4D25EBE7BFC21FDF /* hr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = hr.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/hr.lproj"; sourceTree = "<group>"; };
+		D5553E9D45174B90361D89A5D2F1743D /* Pods-TumbleweedTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TumbleweedTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E10DA5B8441DEB7A7C1A5F8384474A99 /* bg.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = bg.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/bg.png"; sourceTree = "<group>"; };
+		E121C0B8695259AF55A57A7D6A2D44F1 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/it.lproj"; sourceTree = "<group>"; };
+		E450709799F7F2F920A3898DCB6C570E /* Blur@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Blur@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Blur@2x.png"; sourceTree = "<group>"; };
+		E5104F3C80BA8C7528592D006E0E82A5 /* IconGradient.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = IconGradient.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/IconGradient.png"; sourceTree = "<group>"; };
+		E77D53D85E78FF0653E58616A54A3F0A /* iconCamera.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = iconCamera.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/iconCamera.png"; sourceTree = "<group>"; };
+		F19BFA2EF7CDDACEB191C66E86F9CF26 /* buttonRoundedRegularHighlighted@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "buttonRoundedRegularHighlighted@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedRegularHighlighted@2x.png"; sourceTree = "<group>"; };
+		F34EF800CB0ED548AAFD0625AB059C9C /* buttonRoundedRegularHighlighted.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = buttonRoundedRegularHighlighted.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedRegularHighlighted.png"; sourceTree = "<group>"; };
+		F4D572C90659CFD1A7BBCCE771CBE837 /* iconCamera@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "iconCamera@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/iconCamera@2x.png"; sourceTree = "<group>"; };
+		F5740B6EEAEB479021FDC7C73B5E2B01 /* Ok@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Ok@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Ok@3x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E4285FE58B9D59B584D9F34BF3244CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A750792A50A7E61FDB1988171981899 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				699B49B0E0F19F10F2780A0DB6878495 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6EE8C0FD63A605A0EA1590001932FB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				628CFA12EF791C1D1C8B64A21CD14FD4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D191D768DB05E0B990FDA28CCC145CE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37392B4D7291215B441E1043E98067F2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14EA335833301E9702F11C94FDD9E0CB /* Pods-Tumbleweed */ = {
+			isa = PBXGroup;
+			children = (
+				7C37F105F2142F280CDD6640C1B3AEAF /* Pods-Tumbleweed-acknowledgements.markdown */,
+				872A01CD5FCFD0180F6B858F5236A5A1 /* Pods-Tumbleweed-acknowledgements.plist */,
+				355EFA8BC7624871736CA51034E768C7 /* Pods-Tumbleweed-dummy.m */,
+				C1756A6CFFD89B6E9F1E9D5A20E1B4A3 /* Pods-Tumbleweed-frameworks.sh */,
+				072DE3C795A13A293CC90800EE3BE1F5 /* Pods-Tumbleweed-resources.sh */,
+				99E3F18FB90798BBC116B8F22F9C62DD /* Pods-Tumbleweed.debug.xcconfig */,
+				21ECD471960CB670D6BFE72000DA12FA /* Pods-Tumbleweed.release.xcconfig */,
+			);
+			name = "Pods-Tumbleweed";
+			path = "Target Support Files/Pods-Tumbleweed";
+			sourceTree = "<group>";
+		};
+		1EE39278C2FC613477FE7D43E40035F8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				14EA335833301E9702F11C94FDD9E0CB /* Pods-Tumbleweed */,
+				87BD3DBD931D0E8F9A2AC3705F92391D /* Pods-Tumbleweed-tvOSTests */,
+				82986F75A1DC4700C317E40D4EA2DE47 /* Pods-TumbleweedTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2B5A4C6AE5DC495A83706C7C21AE1036 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A018F84C1ABFC5C5DCE138A1C4618D17 /* AppIconPlaceHolder.png */,
+				1342E40D99357D2BE79A0FADC7F943C2 /* Arrow.png */,
+				46EA99ADC684120A6F9DC266CAD014C1 /* Arrow@2x.png */,
+				9C85E928DC95E520B24883DE149BEC62 /* Arrow@3x.png */,
+				B42D67B4B83B28AEFFD2047759BED21E /* authorize_denied.png */,
+				0C695F7EC0B9E548F5A12D46A2BA223C /* authorize_denied@2x.png */,
+				855630EF79AD9AA5A58F9DABD6246854 /* authorize_denied@3x.png */,
+				E10DA5B8441DEB7A7C1A5F8384474A99 /* bg.png */,
+				734F4335334F6982656494A53CB8A789 /* Blur.png */,
+				E450709799F7F2F920A3898DCB6C570E /* Blur@2x.png */,
+				8779048BC02896DAB37AF583C63133D3 /* Blur@3x.png */,
+				2962E8C1951575EBDD4A9EE4F9D73466 /* buttonRoundedDelete.png */,
+				3712C6D928841683464E623E20C61434 /* buttonRoundedDelete@2x.png */,
+				AC5807FD57A37BA38071A2156EB5F393 /* buttonRoundedDeleteHighlighted.png */,
+				5483A24D2B9F7917191DE8A85829B605 /* buttonRoundedDeleteHighlighted@2x.png */,
+				8290E8E1B3B06086211DC0FF6D788DD3 /* buttonRoundedRegular.png */,
+				454864B1857715D2C51536420F4FFB21 /* buttonRoundedRegular@2x.png */,
+				F34EF800CB0ED548AAFD0625AB059C9C /* buttonRoundedRegularHighlighted.png */,
+				F19BFA2EF7CDDACEB191C66E86F9CF26 /* buttonRoundedRegularHighlighted@2x.png */,
+				B19A7B2D7DCA6B664B58E10CEE0C9203 /* Cancel.png */,
+				89B70C12C89D36DABC6BE480EE95EE2D /* Cancel@2x.png */,
+				C5778BA291821FA85A1A6C95694FBFBA /* Cancel@3x.png */,
+				2AAD4A5D2673408637D7279995299734 /* de.lproj */,
+				CC8DCCBAEF1A3B82295C7C2B3D810159 /* en.lproj */,
+				00DF82C5D029910007CE7802FA226D29 /* es.lproj */,
+				238C67997324F051DCA0754D74A5FC01 /* fa.lproj */,
+				9B1F65454D341983D231215C057F689A /* feedbackActivity.png */,
+				B6CF435D8A85D06A5F1EB7F73CD014C8 /* feedbackActivity@2x.png */,
+				0FA236FE8FC9DB68974F48AF03537D50 /* feedbackActivity@2x~ipad.png */,
+				655C08E7824601202493C28BBB3C3439 /* feedbackActivity@3x.png */,
+				94FFC6D1BE3A4537F2C334DBA36FF434 /* feedbackActivity~ipad.png */,
+				13871F6C20D3710290C817BD8DBD93B8 /* FeedbackPlaceholder.png */,
+				8AA92B6EEB1857CA15FF54D41BB00F32 /* fr.lproj */,
+				D3B30CD4C77547FB4D25EBE7BFC21FDF /* hr.lproj */,
+				223FB3F1860D20CE0AEE3705DB3A75C1 /* hu.lproj */,
+				E77D53D85E78FF0653E58616A54A3F0A /* iconCamera.png */,
+				F4D572C90659CFD1A7BBCCE771CBE837 /* iconCamera@2x.png */,
+				E5104F3C80BA8C7528592D006E0E82A5 /* IconGradient.png */,
+				7E5198B09B443AE419A5310064FCD8D9 /* IconGradient@2x.png */,
+				E121C0B8695259AF55A57A7D6A2D44F1 /* it.lproj */,
+				6FEA5B6E51FB32F0B015225BCF624092 /* ja.lproj */,
+				8C126DE54DD41BEBE09D1136F041813D /* nb.lproj */,
+				811CDE77AA0C808A2C5A09125B32EDBC /* nl.lproj */,
+				50F09F3D22619B07601EFB8E2BFA17F9 /* Ok.png */,
+				6594698FEE8A4E0CEA4B2A4419F0E1D0 /* Ok@2x.png */,
+				F5740B6EEAEB479021FDC7C73B5E2B01 /* Ok@3x.png */,
+				4DCE79D60E344080641848EBB84E3C1C /* pt.lproj */,
+				9042C73619F7E1FA2D314D9909585AB1 /* pt-PT.lproj */,
+				6B2DE10AF1A636C515581AD6851ACCF1 /* Rectangle.png */,
+				5FFD04CEA394C33CF54F2733FA70638E /* Rectangle@2x.png */,
+				3DBFD566A4DFBDF77984A70082E5BD7C /* Rectangle@3x.png */,
+				A90193780E25F1F078067899728402BC /* ru.lproj */,
+				05D3CBF2D23FA12DF52B88D63391B1A6 /* zh-Hans.lproj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				EC4CB44E075E7F0F33D6C84131440F2A /* Pods */,
+				804BAF14024E97896F75545AC17BBAEB /* Products */,
+				1EE39278C2FC613477FE7D43E40035F8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		804BAF14024E97896F75545AC17BBAEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A30630F52F101A3510402C79D824D80F /* HockeySDKResources.bundle */,
+				2D2B49C54F37B2BC1F9EB71AF1FBD14D /* libPods-Tumbleweed.a */,
+				162FA57F916EE769B375AC0E8FBECD39 /* libPods-Tumbleweed-tvOSTests.a */,
+				3DAC734F296DE79FCB4984A1E96932CD /* libPods-TumbleweedTests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		82986F75A1DC4700C317E40D4EA2DE47 /* Pods-TumbleweedTests */ = {
+			isa = PBXGroup;
+			children = (
+				D5553E9D45174B90361D89A5D2F1743D /* Pods-TumbleweedTests-acknowledgements.markdown */,
+				CBA1817D1E2E39E77C61B6AE166991D9 /* Pods-TumbleweedTests-acknowledgements.plist */,
+				5929A02134B97EE2E268C3957CC9D356 /* Pods-TumbleweedTests-dummy.m */,
+				45827F7D8712875CBA1A1B29C13E5A97 /* Pods-TumbleweedTests-frameworks.sh */,
+				11D20F9FE7681E1FB0D3ECC0C41D99DE /* Pods-TumbleweedTests-resources.sh */,
+				B2EEABCBAB643140F21875EA573D65E6 /* Pods-TumbleweedTests.debug.xcconfig */,
+				4634F68368A2F91230739A7832BD0939 /* Pods-TumbleweedTests.release.xcconfig */,
+			);
+			name = "Pods-TumbleweedTests";
+			path = "Target Support Files/Pods-TumbleweedTests";
+			sourceTree = "<group>";
+		};
+		87BD3DBD931D0E8F9A2AC3705F92391D /* Pods-Tumbleweed-tvOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				9EF0C8847183FA3A88B952234361D6B5 /* Pods-Tumbleweed-tvOSTests-acknowledgements.markdown */,
+				7D7BA2AB747787121526147811E1E541 /* Pods-Tumbleweed-tvOSTests-acknowledgements.plist */,
+				BBFA184405DBA6719AB8F53E140A4928 /* Pods-Tumbleweed-tvOSTests-dummy.m */,
+				9EAD63A2CFAF937E4099036B151A6069 /* Pods-Tumbleweed-tvOSTests-frameworks.sh */,
+				4C978E160B7B1C00BC7EF9250136868B /* Pods-Tumbleweed-tvOSTests-resources.sh */,
+				33B308429AAEE38BAEF62BC8CC5A6B5E /* Pods-Tumbleweed-tvOSTests.debug.xcconfig */,
+				06991588C5D05A75BA58C60D7E37DEDC /* Pods-Tumbleweed-tvOSTests.release.xcconfig */,
+			);
+			name = "Pods-Tumbleweed-tvOSTests";
+			path = "Target Support Files/Pods-Tumbleweed-tvOSTests";
+			sourceTree = "<group>";
+		};
+		B5F6774BCBF24BBC1F1EABBC731E7427 /* HockeySDK */ = {
+			isa = PBXGroup;
+			children = (
+				E819A6A2E32FD780F797FBBB9E00DB35 /* DefaultLib */,
+				FA514FCADF3C6B78FF02E4D8CCDD570C /* Support Files */,
+			);
+			name = HockeySDK;
+			path = HockeySDK;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3106111035BA440F5C66F0E8A42760F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03F39BCC68D5BBF0307BC6CA2C742E76 /* HockeySDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E819A6A2E32FD780F797FBBB9E00DB35 /* DefaultLib */ = {
+			isa = PBXGroup;
+			children = (
+				C3106111035BA440F5C66F0E8A42760F /* Frameworks */,
+				2B5A4C6AE5DC495A83706C7C21AE1036 /* Resources */,
+			);
+			name = DefaultLib;
+			sourceTree = "<group>";
+		};
+		EC4CB44E075E7F0F33D6C84131440F2A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5F6774BCBF24BBC1F1EABBC731E7427 /* HockeySDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA514FCADF3C6B78FF02E4D8CCDD570C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				237ABABDC84C54B7BB1CFA07DBE47C5A /* ResourceBundle-HockeySDKResources-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HockeySDK";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		332DA4FA860E212FD3AB30845043FCEB /* Pods-TumbleweedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FB33D72010592213FEC1A8D13691651 /* Build configuration list for PBXNativeTarget "Pods-TumbleweedTests" */;
+			buildPhases = (
+				C52FFF6A75918DB2F8B34A688285647B /* Sources */,
+				C6EE8C0FD63A605A0EA1590001932FB9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TumbleweedTests";
+			productName = "Pods-TumbleweedTests";
+			productReference = 3DAC734F296DE79FCB4984A1E96932CD /* libPods-TumbleweedTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		736BC3EB96C40495F15BE2EAD8E6BDA3 /* Pods-Tumbleweed */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDDCF85D9433EB129D6DCDB15F8749CD /* Build configuration list for PBXNativeTarget "Pods-Tumbleweed" */;
+			buildPhases = (
+				F12F8CB39EF6ED5653CDB93CE1BD2029 /* Sources */,
+				D191D768DB05E0B990FDA28CCC145CE2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E8DD78C1C548BD905DF859129D3B302 /* PBXTargetDependency */,
+			);
+			name = "Pods-Tumbleweed";
+			productName = "Pods-Tumbleweed";
+			productReference = 2D2B49C54F37B2BC1F9EB71AF1FBD14D /* libPods-Tumbleweed.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EB9AD825427F216B54E693242E671FA1 /* HockeySDK-HockeySDKResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36BC870E757C15E340A9A6F2C5E8A6F4 /* Build configuration list for PBXNativeTarget "HockeySDK-HockeySDKResources" */;
+			buildPhases = (
+				7097FE18530E2A5B620A9BFBDE8ABC3C /* Sources */,
+				3E4285FE58B9D59B584D9F34BF3244CC /* Frameworks */,
+				5E1A292E24DC1060B1BBA5AB692423C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HockeySDK-HockeySDKResources";
+			productName = "HockeySDK-HockeySDKResources";
+			productReference = A30630F52F101A3510402C79D824D80F /* HockeySDKResources.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		ED39487DACC0F468E8CF85D1C6A99BDB /* Pods-Tumbleweed-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72385A102F2BA95F4E4A96B053E2F7A8 /* Build configuration list for PBXNativeTarget "Pods-Tumbleweed-tvOSTests" */;
+			buildPhases = (
+				B1F03DC7E48B3E5B44D48CD4EE80526B /* Sources */,
+				4A750792A50A7E61FDB1988171981899 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Tumbleweed-tvOSTests";
+			productName = "Pods-Tumbleweed-tvOSTests";
+			productReference = 162FA57F916EE769B375AC0E8FBECD39 /* libPods-Tumbleweed-tvOSTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 804BAF14024E97896F75545AC17BBAEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB9AD825427F216B54E693242E671FA1 /* HockeySDK-HockeySDKResources */,
+				736BC3EB96C40495F15BE2EAD8E6BDA3 /* Pods-Tumbleweed */,
+				ED39487DACC0F468E8CF85D1C6A99BDB /* Pods-Tumbleweed-tvOSTests */,
+				332DA4FA860E212FD3AB30845043FCEB /* Pods-TumbleweedTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5E1A292E24DC1060B1BBA5AB692423C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9EDCE6E451154EB487F04EF2F4EF2A9 /* AppIconPlaceHolder.png in Resources */,
+				44A7EACB545AABDD70E670102CF8C17C /* Arrow.png in Resources */,
+				A18DD09A116B5BFA895E52DBB9E05B4A /* Arrow@2x.png in Resources */,
+				FB6510577C9EB0624EDF73879DC61B45 /* Arrow@3x.png in Resources */,
+				83AA80C4C4288E95D1ED250B7A53B1DB /* authorize_denied.png in Resources */,
+				7C074DD39BC70B9C2FEA1DDC557D1E51 /* authorize_denied@2x.png in Resources */,
+				21AF0368D2A74AE7CACCDF04BDD015FF /* authorize_denied@3x.png in Resources */,
+				F93D762E66C4C543A0BB8B71CEB9CBE8 /* bg.png in Resources */,
+				491750401A9EFDFD245721E7BE4627C6 /* Blur.png in Resources */,
+				87CFB536A253F968FED77C5A75DC8847 /* Blur@2x.png in Resources */,
+				C6E03FE266AC3767805DE30EC71059C1 /* Blur@3x.png in Resources */,
+				8092BB02C170FE0923AD7E7A3640FB24 /* buttonRoundedDelete.png in Resources */,
+				CD9FB0D75EDC3673AAA051DED29F9490 /* buttonRoundedDelete@2x.png in Resources */,
+				84004D40E25E334F16B4D70D53BF149F /* buttonRoundedDeleteHighlighted.png in Resources */,
+				AF756DF0D4B06480BBEA3BBF81A81D13 /* buttonRoundedDeleteHighlighted@2x.png in Resources */,
+				D34E43E323C6A19985196C4D8F0A61D8 /* buttonRoundedRegular.png in Resources */,
+				3D8D9920EE3EF913B602FFEEB8C0A695 /* buttonRoundedRegular@2x.png in Resources */,
+				298A8CF1F92121EE8975416E1B42DA96 /* buttonRoundedRegularHighlighted.png in Resources */,
+				1A434D26CCA5BDDFD62A1C92FF4CE93C /* buttonRoundedRegularHighlighted@2x.png in Resources */,
+				2B196B950858F08FF975A2246D64C9F7 /* Cancel.png in Resources */,
+				F5A90570C26448C498D553B5042EC63F /* Cancel@2x.png in Resources */,
+				7F5F10E74ED8034D89B93DFEB5CFD539 /* Cancel@3x.png in Resources */,
+				2893823E9CB1E5776F122C091C03B4F7 /* de.lproj in Resources */,
+				82A484029E7E614526A7FD2C1366AC39 /* en.lproj in Resources */,
+				18C8FE31C992810CC728A5AFEDAA7F13 /* es.lproj in Resources */,
+				D04B99BD1CFCF232405B6F90B87D5E53 /* fa.lproj in Resources */,
+				9F1E42A64A0982335FB22EA98BADA1CF /* feedbackActivity.png in Resources */,
+				8055D3FC20CCE9BC4F44626203C81745 /* feedbackActivity@2x.png in Resources */,
+				F7832D722DC20EA1887B494B5E50969F /* feedbackActivity@2x~ipad.png in Resources */,
+				4CCBA4C92CA1EEF80DB166BBEE0E0920 /* feedbackActivity@3x.png in Resources */,
+				034F6BF87B11EFC7171144FD31993C02 /* feedbackActivity~ipad.png in Resources */,
+				90C28D94DAD18307A25CF195A78B18DF /* FeedbackPlaceholder.png in Resources */,
+				927F2545D650AD499F0114FC9E7C6341 /* fr.lproj in Resources */,
+				C6E9DDF394B9D50179A07335F0AB5863 /* hr.lproj in Resources */,
+				947E44184B30403F13924C59A1E3B3EE /* hu.lproj in Resources */,
+				0C7B08590B13FDCB31E05F09C69D02E8 /* iconCamera.png in Resources */,
+				1A2180E0DC0BA0B0C7B5CE3ACD2A6768 /* iconCamera@2x.png in Resources */,
+				6F35985538D059073ADF34294A4CD93C /* IconGradient.png in Resources */,
+				F2852A28C22BF89F8787A33932048DB9 /* IconGradient@2x.png in Resources */,
+				67CD82782BD1B0E3D61179A03E1D551C /* it.lproj in Resources */,
+				2F5E6CBD401998573AD5FE0E464262B1 /* ja.lproj in Resources */,
+				62B3B2FF935934D79D6A3F98DD9A3310 /* nb.lproj in Resources */,
+				CC5FD2D069557A5B89BC1879996276D7 /* nl.lproj in Resources */,
+				4F72D084AB1AB0385AFA896BD39BE97D /* Ok.png in Resources */,
+				546C2C92080EDDC0E0991C5D93D85C8C /* Ok@2x.png in Resources */,
+				6FEEAB6B0BF65AD3A4B262D249393BB5 /* Ok@3x.png in Resources */,
+				8C115D2276DEB53520730E0B8791BE0F /* pt-PT.lproj in Resources */,
+				0CA78AC46C03FD0677D2BD70F763AA5D /* pt.lproj in Resources */,
+				DFDE46266B9D8D56D4656A33A14309B0 /* Rectangle.png in Resources */,
+				0A9ED6AAA5EE93F76F69579EEE1BF2FE /* Rectangle@2x.png in Resources */,
+				9BC767136A627318026727B775DC290F /* Rectangle@3x.png in Resources */,
+				ACE32A0A30642056880DC51F9EBDCDDD /* ru.lproj in Resources */,
+				3D9524F690E8C682CA151F6A071BC937 /* zh-Hans.lproj in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7097FE18530E2A5B620A9BFBDE8ABC3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1F03DC7E48B3E5B44D48CD4EE80526B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D159D6E8C53C26C0D612732D312247D8 /* Pods-Tumbleweed-tvOSTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C52FFF6A75918DB2F8B34A688285647B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9F73AF90155DC7BF384CC66D2A2A8F9 /* Pods-TumbleweedTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F12F8CB39EF6ED5653CDB93CE1BD2029 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DEE853791B70F89F9566418B1B472F7 /* Pods-Tumbleweed-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E8DD78C1C548BD905DF859129D3B302 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "HockeySDK-HockeySDKResources";
+			target = EB9AD825427F216B54E693242E671FA1 /* HockeySDK-HockeySDKResources */;
+			targetProxy = 26DCE97F474B0A68B87899DE84904851 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		130B5E275BED7C9B408E8993126CF8F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4634F68368A2F91230739A7832BD0939 /* Pods-TumbleweedTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		1940AF4AC6EC02845B9BD9AC11CC20A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/HockeySDK";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/HockeySDK/ResourceBundle-HockeySDKResources-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = HockeySDKResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		1C7D17A37D091C98D2F0DD886C3A9320 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		34FE9531DA9AF2820790339988D5FF41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3EE1423E15D3D83F8351928611C64880 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99E3F18FB90798BBC116B8F22F9C62DD /* Pods-Tumbleweed.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3F498FE9A2F4068B0C3C7393E0638679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33B308429AAEE38BAEF62BC8CC5A6B5E /* Pods-Tumbleweed-tvOSTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		510B9B401CB56B6AF7E28FE8B952A51C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06991588C5D05A75BA58C60D7E37DEDC /* Pods-Tumbleweed-tvOSTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A2C7F458230DF4F51C75D1AF54DEEC09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/HockeySDK";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/HockeySDK/ResourceBundle-HockeySDKResources-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = HockeySDKResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		AF74D0F049535DFF55807C2DBFBC4D17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21ECD471960CB670D6BFE72000DA12FA /* Pods-Tumbleweed.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B3D12DC64B971E872D9F0E6C3AA37E1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2EEABCBAB643140F21875EA573D65E6 /* Pods-TumbleweedTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C7D17A37D091C98D2F0DD886C3A9320 /* Debug */,
+				34FE9531DA9AF2820790339988D5FF41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36BC870E757C15E340A9A6F2C5E8A6F4 /* Build configuration list for PBXNativeTarget "HockeySDK-HockeySDKResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1940AF4AC6EC02845B9BD9AC11CC20A7 /* Debug */,
+				A2C7F458230DF4F51C75D1AF54DEEC09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FB33D72010592213FEC1A8D13691651 /* Build configuration list for PBXNativeTarget "Pods-TumbleweedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3D12DC64B971E872D9F0E6C3AA37E1D /* Debug */,
+				130B5E275BED7C9B408E8993126CF8F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72385A102F2BA95F4E4A96B053E2F7A8 /* Build configuration list for PBXNativeTarget "Pods-Tumbleweed-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F498FE9A2F4068B0C3C7393E0638679 /* Debug */,
+				510B9B401CB56B6AF7E28FE8B952A51C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDDCF85D9433EB129D6DCDB15F8749CD /* Build configuration list for PBXNativeTarget "Pods-Tumbleweed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EE1423E15D3D83F8351928611C64880 /* Debug */,
+				AF74D0F049535DFF55807C2DBFBC4D17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

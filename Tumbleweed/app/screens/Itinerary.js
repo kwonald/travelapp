@@ -27,6 +27,12 @@ class MyDreamBoard extends Component {
     Alert.alert(activityname);  // activityname
   }
 
+  createTrip = () => {
+    
+    this.props.navigation.navigate('CreateTrip');
+    
+  }
+
   componentDidMount(){
      return fetch('http://localhost:3000/submit_user_info.php')
       .then((response) => response.json())
@@ -68,17 +74,13 @@ class MyDreamBoard extends Component {
        
         
           <View style={styles.MainContainer}>
-            <ListView
-     
-              dataSource={this.state.dataSource}
-     
-              renderSeparator= {this.ListViewItemSeparator}
-     
-              renderRow={(rowData) => <Text style={styles.rowViewContainer} 
-              onPress={this.GetItem.bind(this, rowData.activityname)} >{rowData.activityname}</Text>}
-     
+            
+            <TouchableOpacity onPress={this.createTrip} style={{height:100, width:350, paddingTop: 15}}>
+            <Image
+              style={{height:70, width:350, }}
+              source={require('../assets/explore/createtrip.png')}
             />
-       
+            </TouchableOpacity>      
  
       
          
