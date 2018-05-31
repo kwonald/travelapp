@@ -111,8 +111,6 @@ export const Tabs = TabNavigator({
     },
   },
 
-  
-
   MyTrips: {
     screen: MyTrips,
     navigationOptions: {
@@ -136,7 +134,7 @@ export const Tabs = TabNavigator({
     labelStyle: {
       fontSize: 8,
     },
-    
+
     showIcon: true,
     showLabel: true,
   }
@@ -164,11 +162,11 @@ export const Root = StackNavigator({
 });
 
 export const Onboarding = StackNavigator({
-  // Onboarding: {
-  //   screen: Onboard,
-  // },
+  Onboarding: {
+    screen: Onboard,
+  },
   // add create trip 'modal' here
-  
+
   Root: {
     screen: Root,
   },
